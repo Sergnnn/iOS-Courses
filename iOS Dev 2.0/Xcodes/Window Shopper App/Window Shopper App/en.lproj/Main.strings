@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Clear Calculator"; ObjectID = "38H-1v-ndg"; */
+"38H-1v-ndg.normalTitle" = "Clear Calculator";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7uf-dF-qhw"; */
+"7uf-dF-qhw.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Your hourly wage"; ObjectID = "Pdj-lh-ajg"; */
+"Pdj-lh-ajg.placeholder" = "Your hourly wage";
+
+/* Class = "UILabel"; text = "Hours"; ObjectID = "lGO-P7-ORb"; */
+"lGO-P7-ORb.text" = "Hours";
+
+/* Class = "UITextField"; placeholder = "Item price"; ObjectID = "p9l-Rm-Fxh"; */
+"p9l-Rm-Fxh.placeholder" = "Item price";
