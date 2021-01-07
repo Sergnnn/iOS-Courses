@@ -21,6 +21,7 @@
 		B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485A925A3C165001004A9 /* CustomBackButton.swift */; };
 		B37485AF25A3C46E001004A9 /* CustomTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */; };
 		B37485B425A3C6D7001004A9 /* CustomTeamsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485B325A3C6D7001004A9 /* CustomTeamsButton.swift */; };
+		B3BDB5FE25A5EB4700C81E0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDB5FD25A5EB4700C81E0D /* Model.swift */; };
 		B3DF699525A4AB4C003797B3 /* CustomSubTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */; };
 		B3DF699D25A4AC29003797B3 /* CustomNumberTitleForRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		B37485A925A3C165001004A9 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleLable.swift; sourceTree = "<group>"; };
 		B37485B325A3C6D7001004A9 /* CustomTeamsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamsButton.swift; sourceTree = "<group>"; };
+		B3BDB5FD25A5EB4700C81E0D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubTitleLable.swift; sourceTree = "<group>"; };
 		B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberTitleForRules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +174,7 @@
 		B374858325A3B972001004A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3BDB5FD25A5EB4700C81E0D /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				B374855325A3B81E001004A9 /* StartVC.swift in Sources */,
 				B37485A525A3C10F001004A9 /* TeamsVC.swift in Sources */,
 				B37485B425A3C6D7001004A9 /* CustomTeamsButton.swift in Sources */,
+				B3BDB5FE25A5EB4700C81E0D /* Model.swift in Sources */,
 				B374859D25A3BF67001004A9 /* RulesVC.swift in Sources */,
 				B374858525A3B9FB001004A9 /* CustomBigButton.swift in Sources */,
 				B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */,

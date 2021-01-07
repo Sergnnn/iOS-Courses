@@ -14,6 +14,11 @@ class StartVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func newGameBtn(_ sender: Any) {
+        
+        teams = teamsStructure(teamNames:[], teamsCount: 0)
+       
+    }
+    
 }
 
