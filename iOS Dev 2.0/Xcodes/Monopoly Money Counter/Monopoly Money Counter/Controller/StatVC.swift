@@ -10,24 +10,20 @@ import UIKit
 class StatVC: UIViewController {
 
     @IBOutlet weak var amountOfTransfersLabel: CustomMainLabel!
+    @IBOutlet weak var timePlayedLabel: CustomMainLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTimeEnd()
+        
+        players = [Player]()
 
         amountOfTransfersLabel.text = "\(amountOfTransfers)"
-        players = [Player]()
+        timePlayedLabel.text = "\(diff().hours):\(diff().minutes)"
+        
+      
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -7,17 +7,19 @@
 
 import UIKit
 
-class NamesVC: UIViewController {
+class NamesVC: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var firstTxtField: CustomPlayersTxtField!
+    
     var otherTxtField = [CustomPlayersTxtField]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         firstTxtField.placeholder = "Player 1"
+        self.firstTxtField.delegate = self
         
         
         print("amount of element in array: \(amountOfP)")
@@ -32,6 +34,7 @@ class NamesVC: UIViewController {
         let txtField = CustomPlayersTxtField()
         txtField.customizeView()
         txtField.placeholder = title
+        txtField.delegate = self
         otherTxtField.append(txtField)
         stack.addArrangedSubview(txtField)
     }
@@ -56,7 +59,9 @@ class NamesVC: UIViewController {
         print(players.description)
     }
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
     
     
 }

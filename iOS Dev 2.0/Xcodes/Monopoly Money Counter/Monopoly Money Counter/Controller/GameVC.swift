@@ -27,6 +27,8 @@ class GameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTimeStart()
+        
         let TransferMoneyBtn = TransferMoneyButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60))
         TransferMoneyBtn.addTarget(self, action: #selector(GameVC.transferMoney), for: .touchUpInside)
         valueTextField.inputAccessoryView = TransferMoneyBtn

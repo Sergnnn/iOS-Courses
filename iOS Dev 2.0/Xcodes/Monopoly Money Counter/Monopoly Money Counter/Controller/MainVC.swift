@@ -19,6 +19,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         amountOfP = 4
         amountOfTransfers = 0
+
         
         amountOfPlayersStepper.value = Double(amountOfP)
         amountOfPlayersLabel.text = "\(Int(amountOfPlayersStepper.value).description)"
