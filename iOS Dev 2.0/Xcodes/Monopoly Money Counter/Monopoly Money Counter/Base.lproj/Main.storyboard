@@ -193,10 +193,10 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                <color key="value" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.99904853110000003" green="0.61314189429999999" blue="0.53722196820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                <color key="value" red="1" green="0.72598747539999997" blue="0.4622308168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="value" red="0.99896937610000003" green="0.72489762310000005" blue="0.4665949345" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                         </userDefinedRuntimeAttributes>

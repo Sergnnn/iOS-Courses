@@ -20,7 +20,7 @@ class NamesVC: UIViewController, UITextFieldDelegate {
 
         firstTxtField.placeholder = "Player 1"
         self.firstTxtField.delegate = self
-        
+        firstTxtField.customizeView()
         
         print("amount of element in array: \(amountOfP)")
         for i in 2...amountOfP {
@@ -32,9 +32,9 @@ class NamesVC: UIViewController, UITextFieldDelegate {
     func createTxtField(_ title: String) {
         
         let txtField = CustomPlayersTxtField()
-        txtField.customizeView()
         txtField.placeholder = title
         txtField.delegate = self
+        txtField.customizeView()
         otherTxtField.append(txtField)
         stack.addArrangedSubview(txtField)
     }
