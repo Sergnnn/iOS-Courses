@@ -44,13 +44,13 @@ class RulesVC: UIViewController {
     }
     
         
-    @IBAction func playBtn(_ sender: Any) {
+    @IBAction func playBtn(_ sender: UIButton) {
         rules.amountOfWords = Int(wordsAmountSlider.value)
         rules.roundTime = Int(roundTimeSlider.value)
         rules.minusWord = minusWordSwitch.isOn
         rules.generalWord = generalWordSwitch.isOn
         rules.soundInGame = soundInGameSwitch.isOn
-        
+
         print(rules.amountOfWords)
         print(rules.roundTime)
         print(rules.minusWord)
