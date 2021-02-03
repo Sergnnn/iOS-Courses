@@ -11,7 +11,6 @@
 		B30C07E325C4510500C5CFCD /* Alias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B30C07E125C4510500C5CFCD /* Alias.xcdatamodeld */; };
 		B30C07E825C457C800C5CFCD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07E725C457C800C5CFCD /* Data.swift */; };
 		B33F759B25A8B598005FC372 /* WordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F759A25A8B598005FC372 /* WordsVC.swift */; };
-		B33F75A025A8BD1F005FC372 /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F759F25A8BD1F005FC372 /* CustomCollectionViewController.swift */; };
 		B374854F25A3B81E001004A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374854E25A3B81E001004A9 /* AppDelegate.swift */; };
 		B374855125A3B81E001004A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374855025A3B81E001004A9 /* SceneDelegate.swift */; };
 		B374855325A3B81E001004A9 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374855225A3B81E001004A9 /* StartVC.swift */; };
@@ -26,7 +25,8 @@
 		B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485A925A3C165001004A9 /* CustomBackButton.swift */; };
 		B37485AF25A3C46E001004A9 /* CustomTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */; };
 		B37485B425A3C6D7001004A9 /* CustomTeamsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485B325A3C6D7001004A9 /* CustomTeamsButton.swift */; };
-		B3BDB5FE25A5EB4700C81E0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDB5FD25A5EB4700C81E0D /* Model.swift */; };
+		B3BA506F25C9EA910050CCAE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA506E25C9EA910050CCAE /* Model.swift */; };
+		B3BA507A25CAA9720050CCAE /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA507925CAA9720050CCAE /* TeamsCell.swift */; };
 		B3DF699525A4AB4C003797B3 /* CustomSubTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */; };
 		B3DF699D25A4AC29003797B3 /* CustomNumberTitleForRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,6 @@
 		B30C07E225C4510500C5CFCD /* Alias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alias.xcdatamodel; sourceTree = "<group>"; };
 		B30C07E725C457C800C5CFCD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B33F759A25A8B598005FC372 /* WordsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsVC.swift; sourceTree = "<group>"; };
-		B33F759F25A8BD1F005FC372 /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		B374854B25A3B81E001004A9 /* Alias-First-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alias-First-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B374854E25A3B81E001004A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B374855025A3B81E001004A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +73,8 @@
 		B37485A925A3C165001004A9 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleLable.swift; sourceTree = "<group>"; };
 		B37485B325A3C6D7001004A9 /* CustomTeamsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamsButton.swift; sourceTree = "<group>"; };
-		B3BDB5FD25A5EB4700C81E0D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		B3BA506E25C9EA910050CCAE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B3BA507925CAA9720050CCAE /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
 		B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubTitleLable.swift; sourceTree = "<group>"; };
 		B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberTitleForRules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,8 +188,8 @@
 				B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */,
 				B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */,
 				B37485B325A3C6D7001004A9 /* CustomTeamsButton.swift */,
-				B33F759F25A8BD1F005FC372 /* CustomCollectionViewController.swift */,
 				B30C07D825C44FEA00C5CFCD /* WordsCategoryCell.swift */,
+				B3BA507925CAA9720050CCAE /* TeamsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 		B374858325A3B972001004A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3BDB5FD25A5EB4700C81E0D /* Model.swift */,
+				B3BA506E25C9EA910050CCAE /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,12 +335,12 @@
 				B374855325A3B81E001004A9 /* StartVC.swift in Sources */,
 				B37485A525A3C10F001004A9 /* TeamsVC.swift in Sources */,
 				B37485B425A3C6D7001004A9 /* CustomTeamsButton.swift in Sources */,
-				B33F75A025A8BD1F005FC372 /* CustomCollectionViewController.swift in Sources */,
 				B30C07E325C4510500C5CFCD /* Alias.xcdatamodeld in Sources */,
-				B3BDB5FE25A5EB4700C81E0D /* Model.swift in Sources */,
+				B3BA507A25CAA9720050CCAE /* TeamsCell.swift in Sources */,
 				B374859D25A3BF67001004A9 /* RulesVC.swift in Sources */,
 				B374858525A3B9FB001004A9 /* CustomBigButton.swift in Sources */,
 				B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */,
+				B3BA506F25C9EA910050CCAE /* Model.swift in Sources */,
 				B3DF699D25A4AC29003797B3 /* CustomNumberTitleForRules.swift in Sources */,
 				B3DF699525A4AB4C003797B3 /* CustomSubTitleLable.swift in Sources */,
 				B374854F25A3B81E001004A9 /* AppDelegate.swift in Sources */,

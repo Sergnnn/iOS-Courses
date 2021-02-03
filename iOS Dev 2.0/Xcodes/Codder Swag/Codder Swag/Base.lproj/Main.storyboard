@@ -103,28 +103,28 @@
                                 <rect key="frame" x="0.0" y="69" width="414" height="739"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hIM-9H-grh">
-                                    <size key="itemSize" width="187" height="263"/>
+                                    <size key="itemSize" width="186" height="263"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="HNh-Vk-J52" customClass="ProductCell" customModule="Codder_Swag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="263"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="263"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BgV-Ra-nLL">
-                                            <rect key="frame" x="0.0" y="0.0" width="187" height="263"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="djJ-h1-pYe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="188"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="186" height="188"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="175" id="X6U-yY-jsS"/>
                                                         <constraint firstAttribute="height" constant="175" id="dEM-6y-ehs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes Logo Graphics T-Shirt" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-EL-qQh">
-                                                    <rect key="frame" x="1" y="188" width="185" height="50"/>
+                                                    <rect key="frame" x="1" y="188" width="184" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="4dv-RP-nRL"/>
                                                     </constraints>
@@ -133,7 +133,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rs-EU-foB">
-                                                    <rect key="frame" x="1" y="238" width="185" height="20"/>
+                                                    <rect key="frame" x="1" y="238" width="184" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="HXH-Lg-bKs"/>
                                                     </constraints>
@@ -156,7 +156,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                        <size key="customSize" width="187" height="263"/>
+                                        <size key="customSize" width="186" height="263"/>
                                         <connections>
                                             <outlet property="productImage" destination="djJ-h1-pYe" id="SVg-ci-74L"/>
                                             <outlet property="productPrice" destination="1Rs-EU-foB" id="egD-P7-kLx"/>
@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huA-Bs-Pju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="94"/>
+            <point key="canvasLocation" x="1450.7246376811595" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VDv-Q1-WYX">

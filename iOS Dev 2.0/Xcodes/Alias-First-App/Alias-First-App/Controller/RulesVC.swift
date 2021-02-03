@@ -22,10 +22,11 @@ class RulesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wordsAmountLabel.text = "\(Int(wordsAmountSlider.value))"
         wordsAmountSlider.value = 50
-        roundTimeLabel.text = "\(Int(roundTimeSlider.value))"
+        wordsAmountLabel.text = "\(Int(wordsAmountSlider.value))"
         roundTimeSlider.value = 60
+        roundTimeLabel.text = "\(Int(roundTimeSlider.value))"
+        
         minusWordSwitch.isOn = false
         generalWordSwitch.isOn = false
         soundInGameSwitch.isOn = false
@@ -36,11 +37,13 @@ class RulesVC: UIViewController {
     @IBAction func wordsAmountSliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         wordsAmountLabel.text = "\(currentValue)"
+        amountOfWords = currentValue
     }
     
     @IBAction func roundTimeSliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         roundTimeLabel.text = "\(currentValue)"
+        roundTime = currentValue
     }
     
         

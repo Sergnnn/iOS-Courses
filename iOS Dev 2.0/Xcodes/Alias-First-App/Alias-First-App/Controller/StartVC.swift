@@ -11,13 +11,21 @@ class StartVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        words = [word]()
+        
+        words.append(word(categoryName: "Category A", categoryIsEnable: true, categoryImageName: "catA", word: ["AA","AAA"]))
+        words.append(word(categoryName: "Category B", categoryIsEnable: false, categoryImageName: "catB", word: ["BB","BBB"]))
+        words.append(word(categoryName: "Category C", categoryIsEnable: false, categoryImageName: "catC", word: ["CC","CCC"]))
+        
+        teams = [team]()
+        
+        addTeam()
+        addTeam()
     }
 
     @IBAction func newGameBtn(_ sender: Any) {
-        
-        teams = teamsStructure(teamNames:[], teamsCount: 0)
-       
+        print(teams)
     }
     
 }

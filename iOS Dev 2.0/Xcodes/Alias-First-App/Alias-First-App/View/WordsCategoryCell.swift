@@ -7,16 +7,18 @@
 
 import UIKit
 
-class WordsCategoryCell: UITableViewCell {
+class WordsCategoryCell: UICollectionViewCell {
 
     @IBOutlet weak var wordsCategoryName: UILabel!
-    @IBOutlet weak var switchValue: UISwitch!
+    @IBOutlet weak var wordsCategoryImage: UIImageView!
+    @IBOutlet weak var categoryIsEnable: UIImageView!
     
-//    func configureCell(goal: Goal  ) {
-//        self.goalDescriptionLabel.text = goal.goalDescription
-//        self.goalTypeLabel.text = goal.goalType
-//        self.goalProgressLabel.text = String(goal.goalProgress)
-//
-//    }
+    
+    func updateCell(word: word) {
+        wordsCategoryName.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        wordsCategoryName.text = word.categoryName
+        wordsCategoryImage.image = UIImage(named: word.categoryImageName)
+        categoryIsEnable.isHidden = !word.categoryIsEnable
+    }
 
 }
