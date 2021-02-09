@@ -20,6 +20,7 @@ struct word {
 
 struct team {
     var name: String
+    var score: Int
 }
 
 struct rulesStructure {
@@ -31,8 +32,10 @@ struct rulesStructure {
 }
 
 var words = [word]()
-var amountOfWords:Int = 0
-var roundTime:Int = 0
+var wordsForTheGame = [String]()
+var amountOfWords: Int = 0
+var roundTime: Int = 0
+var roundCounter: Int = 1
 
 let teamsFile: [String] = ["Коты", "Собаки", "Ниндзи", "Живчиикии", "Роботы", "Приведения", "Косатики", "Лорды", "Фиксики", "Брины", "Еноты", "Динамо", "Шахтер"]
 var teamNames = teamsFile

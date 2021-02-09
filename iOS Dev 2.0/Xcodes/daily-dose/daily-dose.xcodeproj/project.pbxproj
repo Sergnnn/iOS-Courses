@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B30C07C025C424A200C5CFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07BF25C424A200C5CFCD /* AppDelegate.swift */; };
 		B30C07C225C424A200C5CFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07C125C424A200C5CFCD /* SceneDelegate.swift */; };
-		B30C07C425C424A200C5CFCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07C325C424A200C5CFCD /* ViewController.swift */; };
+		B30C07C425C424A200C5CFCD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07C325C424A200C5CFCD /* HomeVC.swift */; };
 		B30C07C725C424A200C5CFCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30C07C525C424A200C5CFCD /* Main.storyboard */; };
 		B30C07C925C424A500C5CFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30C07C825C424A500C5CFCD /* Assets.xcassets */; };
 		B30C07CC25C424A500C5CFCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30C07CA25C424A500C5CFCD /* LaunchScreen.storyboard */; };
+		B3AEB2A125CED82F00599628 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AEB2A025CED82F00599628 /* GoogleMobileAds.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B3AEB2B025CEE32F00599628 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEB2AF25CEE32F00599628 /* PurchaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B30C07BC25C424A200C5CFCD /* daily-dose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daily-dose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30C07BF25C424A200C5CFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30C07C125C424A200C5CFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B30C07C325C424A200C5CFCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B30C07C325C424A200C5CFCD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B30C07C625C424A200C5CFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B30C07C825C424A500C5CFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B30C07CB25C424A500C5CFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B30C07CD25C424A500C5CFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3AEB2A025CED82F00599628 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		B3AEB2AF25CEE32F00599628 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3AEB2A125CED82F00599628 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				B30C07BE25C424A200C5CFCD /* daily-dose */,
 				B30C07BD25C424A200C5CFCD /* Products */,
+				B3AEB2A325CED86100599628 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +62,40 @@
 		B30C07BE25C424A200C5CFCD /* daily-dose */ = {
 			isa = PBXGroup;
 			children = (
+				B3AEB2AE25CEE31900599628 /* PurchaseManager */,
+				B3AEB2AC25CEE2E400599628 /* Controller */,
 				B30C07BF25C424A200C5CFCD /* AppDelegate.swift */,
 				B30C07C125C424A200C5CFCD /* SceneDelegate.swift */,
-				B30C07C325C424A200C5CFCD /* ViewController.swift */,
 				B30C07C525C424A200C5CFCD /* Main.storyboard */,
 				B30C07C825C424A500C5CFCD /* Assets.xcassets */,
 				B30C07CA25C424A500C5CFCD /* LaunchScreen.storyboard */,
 				B30C07CD25C424A500C5CFCD /* Info.plist */,
 			);
 			path = "daily-dose";
+			sourceTree = "<group>";
+		};
+		B3AEB2A325CED86100599628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEB2A025CED82F00599628 /* GoogleMobileAds.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3AEB2AC25CEE2E400599628 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B30C07C325C424A200C5CFCD /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3AEB2AE25CEE31900599628 /* PurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEB2AF25CEE32F00599628 /* PurchaseManager.swift */,
+			);
+			path = PurchaseManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30C07C425C424A200C5CFCD /* ViewController.swift in Sources */,
+				B30C07C425C424A200C5CFCD /* HomeVC.swift in Sources */,
 				B30C07C025C424A200C5CFCD /* AppDelegate.swift in Sources */,
+				B3AEB2B025CEE32F00599628 /* PurchaseManager.swift in Sources */,
 				B30C07C225C424A200C5CFCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,11 +320,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2XWCR3756;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "daily-dose/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.daily-dose";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -307,11 +346,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2XWCR3756;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "daily-dose/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.daily-dose";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

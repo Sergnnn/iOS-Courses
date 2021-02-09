@@ -9,7 +9,6 @@ import Foundation
 
 
 func chooseTeamName() -> (String) {
-   
     if teamNames.count == 0 {
             teamNames = teamsFile
         }
@@ -18,17 +17,13 @@ func chooseTeamName() -> (String) {
         let number = Int.random(in: 0...arrayOfNames.count - 1)
         let teamName = arrayOfNames[number]
         teamNames.remove(at: number)
-        
         return teamName
     }
 
-
 func addTeam() -> () {
-    
     var newTeams = teams
-    newTeams.append(team(name: chooseTeamName()))
+    newTeams.append(team(name: chooseTeamName(), score: 0))
     teams = newTeams
-    
 }
 
 func deleteLastTeam() -> () {
@@ -37,4 +32,11 @@ func deleteLastTeam() -> () {
     teams = newTeams
 }
 
+func getWordsForTheGame() {
+    for i in 0...words.count - 1 {
+        if words[i].categoryIsEnable {
+            wordsForTheGame.append(contentsOf: words[i].word)
+        }
+    }
+}
 
