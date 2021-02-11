@@ -25,8 +25,8 @@ class CustomBackButton: UIButton {
         
         let image = UIImage(systemName: "chevron.left")
 
-        tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , for: .normal)
+        tintColor = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 1)
+        setTitleColor(#colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 1) , for: .normal)
         titleLabel?.font = UIFont(name: "Avenir", size: 17)
         setImage(image, for: .normal)
         setTitle("Back", for: .normal)

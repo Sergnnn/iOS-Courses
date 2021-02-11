@@ -58,7 +58,7 @@ class TeamsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.plusBtnShow()
             }
             
-            contextItem.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            contextItem.backgroundColor = #colorLiteral(red: 0.8515639305, green: 0, blue: 0.2817598879, alpha: 1)
             let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
             return swipeActions
         }

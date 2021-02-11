@@ -51,4 +51,13 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         
         print(words)
     }
+    @IBAction func playBtn(_ sender: Any) {
+        var allDisabel = true
+        for i in 0...words.count - 1{
+            allDisabel = allDisabel && !words[i].categoryIsEnable
+        }
+        if allDisabel {
+            words[0].categoryIsEnable = true
+        }
+    }
 }

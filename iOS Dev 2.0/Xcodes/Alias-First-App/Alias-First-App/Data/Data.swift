@@ -1,46 +1,110 @@
 //
-//  Data.swift
-//  Alias-First-App
+//Data.swift
+//Alias-First-App
 //
-//  Created by Сергей Непомящий on 29.01.2021.
+//Created by Сергей Непомящий on 29.01.2021.
 //
 
 import Foundation
 
+let listOfWordsA = [
+"a" ,
+"abandon" ,
+"ability" ,
+"able" ,
+"about" ,
+"about" ,
+"above" ,
+"above" ,
+"abroad" ,
+"absence" ,
+"absent" ,
+"absolute" ,
+"abstract" ,
+"abstract" ,
+"abuse" ,
+"abuse" ,
+"abusive" ,
+"academic" ,
+"accept" ,
+"acceptable" ,
+"acceptance" ,
+"access" ,
+"access" ,
+"accident" ,
+"accompany" ,
+"according,to" ,
+"account" ,
+"account" ,
+"accountant" ,
+"accurate"
+]
 
+let listOfWordsB = [
+ "baby",
+ "bachelor's degree",
+ "back",
+ "back",
+ "back",
+ "back",
+ "backboard",
+ "backhand",
+ "backward",
+ "backward",
+ "bacterium",
+ "bad",
+ "badly",
+ "bag",
+ "baggage",
+ "baggage",
+ "bake",
+ "balance",
+ "balance",
+ "ball",
+ "band",
+ "bandage",
+ "bandage",
+ "bang",
+ "bank",
+ "banker",
+ "bankrupt",
+ "bankrupt",
+ "bankrupt",
+ "bankruptcy"
+]
 
-struct word {
-    var categoryName: String
-    var categoryIsEnable: Bool
-    var categoryImageName: String
-    var word: [String]
-}
-
-
-
-struct team {
-    var name: String
-    var score: Int
-}
-
-struct rulesStructure {
-    var amountOfWords: Int
-    var roundTime: Int
-    var minusWord: Bool
-    var generalWord: Bool
-    var soundInGame: Bool
-}
-
-var words = [word]()
-var wordsForTheGame = [String]()
-var amountOfWords: Int = 0
-var roundTime: Int = 0
-var roundCounter: Int = 1
-
-let teamsFile: [String] = ["Коты", "Собаки", "Ниндзи", "Живчиикии", "Роботы", "Приведения", "Косатики", "Лорды", "Фиксики", "Брины", "Еноты", "Динамо", "Шахтер"]
-var teamNames = teamsFile
-var teams = [team]()
-var rules = rulesStructure(amountOfWords: 0, roundTime: 0, minusWord: false, generalWord: false, soundInGame: false)
+let listOfWordsC = [
+ "cage",
+ "cake",
+ "calculate",
+ "calculation",
+ "calendar",
+ "calf",
+ "call",
+ "call",
+ "calm",
+ "camera",
+ "camp",
+ "camp",
+ "campaign",
+ "campus",
+ "can",
+ "can",
+ "cancel",
+ "cancer",
+ "candidate",
+ "candy",
+ "cap",
+ "capable",
+ "capacity",
+ "capital",
+ "capital",
+ "captain",
+ "capture",
+ "car",
+ "carbon dioxide",
+ "carbon monoxide"
+]
 
 
 

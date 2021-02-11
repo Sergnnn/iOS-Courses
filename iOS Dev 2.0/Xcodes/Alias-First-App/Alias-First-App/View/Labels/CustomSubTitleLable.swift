@@ -23,8 +23,8 @@ class CustomSubTitleLable: UILabel {
     
     func CustomSubTitleLable() {
     
-        textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        font = UIFont(name: "Avenir", size: 15)
+        textColor = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 1)
+        font = UIFont(name: "Avenir", size: 18)
        
     }
 

@@ -33,6 +33,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         scoreToAchive.text = "\(rules.amountOfWords)"
         roundNumber.text = "Раунд \(roundCounter)"
         teamOnTurnName.text = "\(teams[0].name)"
+        
+        getWordsForTheGame()
+        
+        print(words)
+        print(wordsForTheGame)
 
     }
     
