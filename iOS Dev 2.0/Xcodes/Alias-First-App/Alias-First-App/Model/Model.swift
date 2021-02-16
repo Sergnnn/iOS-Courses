@@ -14,10 +14,9 @@ struct word {
     var word: [String]
 }
 
-
-
 struct team {
     var name: String
+    var number: Int
     var score: Int
 }
 
@@ -29,6 +28,13 @@ struct rulesStructure {
     var soundInGame: Bool
 }
 
+struct result{
+    var team: String
+    var score: Int
+    var words: [String]
+    var wordIsCorrect: [Bool]
+}
+
 var words = [word]()
 var wordsForTheGame = [String]()
 var wordsForTheRound = [String]()
@@ -36,6 +42,9 @@ var amountOfWords: Int = 0
 var roundTime: Int = 0
 var roundCounter: Int = 1
 var scoreOfTheRound: Int = 0
+var teamNumber: Int = 0
+var results = [result(team: "", score: 0, words: [], wordIsCorrect: [])]
+
 
 let teamsFile: [String] = ["Коты", "Собаки", "Ниндзи", "Живчиикии", "Роботы", "Приведения", "Косатики", "Лорды", "Фиксики", "Брины", "Еноты", "Динамо", "Шахтер"]
 var teamNames = teamsFile
@@ -55,13 +64,13 @@ func chooseTeamName() -> (String) {
         return teamName
     }
 
-func addTeam() -> () {
+func addTeam() {
     var newTeams = teams
-    newTeams.append(team(name: chooseTeamName(), score: 0))
+    newTeams.append(team(name: chooseTeamName(), number: newTeams.count, score: 0))
     teams = newTeams
 }
 
-func deleteLastTeam() -> () {
+func deleteLastTeam() {
     var newTeams = teams
     newTeams.removeLast()
     teams = newTeams
@@ -86,5 +95,24 @@ func getRandomWordAndRemoveIt() -> String{
         return randomWord
     }
 
+func nextTeamAndRoundCounter() {
+    if teamNumber < teams.count - 1 { teamNumber += 1 }
+    else { teamNumber = 0 ; roundCounter += 1 }
+}
 
+func updateTeamsAndResetCounters() {
+    for i in 0...teams.count - 1 {
+        if teams[i].name == results[0].team {
+            teams[i].score += results[0].score
+        }
+    }
+    scoreOfTheRound = 0
+    results[0].words.removeAll()
+    results[0].wordIsCorrect.removeAll()
+}
+
+func checkForAWinner(teamNumber: Int) -> Bool {
+    if teams[teamNumber].score >= rules.amountOfWords {return true}
+    else {return false}
+}
 

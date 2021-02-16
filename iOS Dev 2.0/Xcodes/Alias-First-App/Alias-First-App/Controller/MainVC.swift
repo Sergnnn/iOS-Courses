@@ -8,8 +8,7 @@
 import UIKit
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
-    
+       
 
     @IBOutlet weak var scoreToAchive: CustomTitleLable!
     @IBOutlet weak var teamsTable: UITableView!
@@ -32,12 +31,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         scoreToAchive.text = "\(rules.amountOfWords)"
         roundNumber.text = "Раунд \(roundCounter)"
-        teamOnTurnName.text = "\(teams[0].name)"
+        teamOnTurnName.text = "\(teams[teamNumber].name)"
         
-        getWordsForTheGame()
         
-        print(words)
-        print(wordsForTheGame)
+        
+        debugPrint(wordsForTheGame.count)
 
     }
     

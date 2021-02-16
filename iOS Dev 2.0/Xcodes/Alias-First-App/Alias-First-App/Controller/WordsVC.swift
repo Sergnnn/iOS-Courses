@@ -24,6 +24,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         wordsCategoryCollection.isScrollEnabled = false
         wordsCategoryCollection.backgroundColor = nil
         
+        roundCounter = 1
     }
 
     
@@ -46,11 +47,14 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         } else {
             words[indexPath.row].categoryIsEnable = true
         }
-        
         wordsCategoryCollection.reloadData()
-        
-        print(words)
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        getWordsForTheGame()
+    }
+    
     @IBAction func playBtn(_ sender: Any) {
         var allDisabel = true
         for i in 0...words.count - 1{

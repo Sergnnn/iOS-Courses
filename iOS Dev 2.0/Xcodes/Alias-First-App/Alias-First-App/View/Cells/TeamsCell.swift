@@ -18,8 +18,8 @@ class TeamsCell: UITableViewCell {
     }
     
     func cellDesign() {
-        layer.cornerRadius = 0
-        layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2)
+        //layer.cornerRadius = 0
+        //layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2)
     }
     
     func updateCell(team: team) {

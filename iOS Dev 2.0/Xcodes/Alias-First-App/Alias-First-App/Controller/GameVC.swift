@@ -10,9 +10,9 @@ import UIKit
 class GameVC: UIViewController {
 // MARK: - Variables
     var timer: Timer?
-    var timeLeft: Int = rules.roundTime
+    var timeLeft: Int = 2 //rules.roundTime
     var noTimeLeft: Bool = false
-    
+  
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var scoreOfTheRoundLbl: UILabel!
     @IBOutlet weak var wordToGuess: UILabel!
@@ -22,9 +22,12 @@ class GameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        wordToGuess.isHidden = false
         wordToGuess.text = getRandomWordAndRemoveIt()
         timerLbl.text = "\(rules.roundTime)"
+        results[0].team = teams[teamNumber].name
         setupTimer()
+        
         
         
     }
@@ -32,22 +35,39 @@ class GameVC: UIViewController {
 
 // MARK: - Actions
     @IBAction func correctBtn(_ sender: Any) {
-        wordToGuess.text = getRandomWordAndRemoveIt()
+        
         roundScoreCounter(true)
         setScoreOfTheRoundLbl()
-        print(scoreOfTheRound)
-        print(wordsForTheRound)
+        results[0].words.append(wordToGuess.text!)
+        results[0].wordIsCorrect.append(true)
+        results[0].score = scoreOfTheRound
         
-        if noTimeLeft {performSegue(withIdentifier: "ResultsVC", sender: nil)}
+        wordToGuess.text = getRandomWordAndRemoveIt()
+        
+        debugPrint(results)
+        
+        
+        if noTimeLeft {
+            
+            wordToGuess.isHidden = true
+            performSegue(withIdentifier: "ResultsVC", sender: nil)}
     }
     @IBAction func unCorrectBtn(_ sender: Any) {
-        wordToGuess.text = getRandomWordAndRemoveIt()
+        
         roundScoreCounter(false)
         setScoreOfTheRoundLbl()
-        print(scoreOfTheRound)
-        print(wordsForTheRound)
+        results[0].words.append(wordToGuess.text!)
+        results[0].wordIsCorrect.append(false)
+        results[0].score = scoreOfTheRound
         
-        if noTimeLeft {performSegue(withIdentifier: "ResultsVC", sender: nil)}
+        wordToGuess.text = getRandomWordAndRemoveIt()
+        
+        debugPrint(results)
+        
+        if noTimeLeft {
+            
+            wordToGuess.isHidden = true
+            performSegue(withIdentifier: "ResultsVC", sender: nil)}
     }
 // MARK: - Functions
     func setScoreOfTheRoundLbl() {
@@ -58,14 +78,14 @@ class GameVC: UIViewController {
         if tf {scoreOfTheRound += 1}
         else {
             if scoreOfTheRound == 0 {scoreOfTheRound = 0}
-            else {scoreOfTheRound -= 1}
+            else {return}
         }
     }
 // MARK: - Timer
     func setupTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.timeLeft != 0 {
-                self.timerLbl.text = String(self.timeLeft)
+                self.timerLbl.text = "\(self.timeLeft) sec"
                 self.timeLeft -= 1
             } else {
                 timer.invalidate()

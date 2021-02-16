@@ -18,13 +18,17 @@ class StartVC: UIViewController {
         words.append(word(categoryName: "Category B", categoryIsEnable: false, categoryImageName: "catB", word: listOfWordsB))
         words.append(word(categoryName: "Category C", categoryIsEnable: false, categoryImageName: "catC", word: listOfWordsC))
         
-        teams = [team]()
         
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        teams = [team]()
         addTeam()
         addTeam()
     }
-
+    
     @IBAction func newGameBtn(_ sender: Any) {
+        
         print(teams)
     }
     
