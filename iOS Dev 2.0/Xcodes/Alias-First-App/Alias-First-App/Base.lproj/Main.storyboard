@@ -65,7 +65,7 @@
         <!--TeamsVC-->
         <scene sceneID="nRQ-vO-l38">
             <objects>
-                <viewController id="wER-zL-UpX" userLabel="TeamsVC" customClass="TeamsVC" customModule="Alias_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamsVC" title="TeamsVC" id="wER-zL-UpX" userLabel="TeamsVC" customClass="TeamsVC" customModule="Alias_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1GA-Mu-pW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,16 +123,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mee-Ck-ILG">
+                                                    <rect key="frame" x="309" y="12.5" width="55" height="30"/>
+                                                    <state key="normal" title="DELETE">
+                                                        <color key="titleColor" red="0.78020232450000004" green="0.14622935940000001" blue="0.1397945897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="fAs-oV-aqQ" eventType="touchUpInside" id="y7w-ZT-Yf9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LXS-De-aHC" firstAttribute="centerY" secondItem="8Tm-j8-nkn" secondAttribute="centerY" id="21o-wy-7Dg"/>
                                                 <constraint firstItem="LXS-De-aHC" firstAttribute="top" secondItem="8Tm-j8-nkn" secondAttribute="top" constant="5" id="U4p-tZ-MqX"/>
                                                 <constraint firstItem="LXS-De-aHC" firstAttribute="leading" secondItem="8Tm-j8-nkn" secondAttribute="leadingMargin" id="ccn-8g-ZqC"/>
+                                                <constraint firstItem="mee-Ck-ILG" firstAttribute="centerY" secondItem="8Tm-j8-nkn" secondAttribute="centerY" id="glJ-wx-gVn"/>
                                                 <constraint firstAttribute="bottom" secondItem="LXS-De-aHC" secondAttribute="bottom" constant="5" id="hDR-ZL-BX8"/>
+                                                <constraint firstAttribute="trailing" secondItem="mee-Ck-ILG" secondAttribute="trailing" constant="10" id="zlc-FR-aOm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="deleteButton" destination="mee-Ck-ILG" id="C4p-Bb-2UH"/>
                                             <outlet property="teamNameLbl" destination="LXS-De-aHC" id="WI4-9x-gwg"/>
                                         </connections>
                                     </tableViewCell>
@@ -567,58 +579,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jd6-d9-iPZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="yMr-Sw-2nJ">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-5Q-DT5" userLabel="Category + Switch">
-                            <rect key="frame" x="40" y="44" width="334" height="61"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CdV-We-5yN" userLabel="Category Name">
-                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="61"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время раунда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYy-JK-N1Z" customClass="CustomTitleLable" customModule="Alias_First_App" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="30.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в секундах" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2E-ZH-49c" customClass="CustomSubTitleLable" customModule="Alias_First_App" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="30.5" width="145.5" height="30.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-x0-8vE">
-                                    <rect key="frame" x="285" y="15" width="51" height="31"/>
-                                </switch>
-                            </subviews>
-                        </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOQ-2u-186">
-                            <rect key="frame" x="0.0" y="74" width="414" height="1"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="sTB-fJ-PuM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <size key="shadowOffset" width="0.0" height="0.0"/>
-                        </label>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="ynj-LG-9Pm"/>
-                    <color key="backgroundColor" systemColor="systemTealColor"/>
-                    <constraints>
-                        <constraint firstItem="dOg-5Q-DT5" firstAttribute="top" secondItem="yMr-Sw-2nJ" secondAttribute="topMargin" id="N9Z-Dq-PCJ"/>
-                        <constraint firstItem="nOQ-2u-186" firstAttribute="leading" secondItem="yMr-Sw-2nJ" secondAttribute="leading" id="gzO-XF-jgv"/>
-                        <constraint firstAttribute="bottom" secondItem="nOQ-2u-186" secondAttribute="bottom" id="kXF-nw-cFi"/>
-                        <constraint firstItem="dOg-5Q-DT5" firstAttribute="leading" secondItem="yMr-Sw-2nJ" secondAttribute="leadingMargin" constant="20" id="npS-RQ-vIG"/>
-                        <constraint firstAttribute="trailing" secondItem="nOQ-2u-186" secondAttribute="trailing" id="tQu-4J-VQc"/>
-                        <constraint firstAttribute="trailingMargin" secondItem="dOg-5Q-DT5" secondAttribute="trailing" constant="20" id="y4P-RU-ppn"/>
-                    </constraints>
-                </view>
             </objects>
             <point key="canvasLocation" x="391" y="94"/>
         </scene>
@@ -1387,12 +1347,6 @@
         <designable name="swy-2y-KRH">
             <size key="intrinsicContentSize" width="145.5" height="30.5"/>
         </designable>
-        <designable name="t2E-ZH-49c">
-            <size key="intrinsicContentSize" width="93" height="25"/>
-        </designable>
-        <designable name="tYy-JK-N1Z">
-            <size key="intrinsicContentSize" width="145.5" height="30.5"/>
-        </designable>
         <designable name="tnH-t5-Kso">
             <size key="intrinsicContentSize" width="298" height="25"/>
         </designable>
@@ -1405,21 +1359,18 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="D4n-WT-odj"/>
-        <segue reference="yYM-fI-GrM"/>
+        <segue reference="qpv-po-zFq"/>
         <segue reference="l4b-FY-Z1u"/>
-        <segue reference="jcM-Kb-bly"/>
+        <segue reference="Kfy-pO-vvi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BG2" width="1000" height="1000"/>
         <image name="Cross" width="1024" height="1024"/>
         <image name="Tick" width="143.5" height="143.5"/>
         <image name="crown" catalog="system" width="128" height="92"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.circle" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

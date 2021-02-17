@@ -67,6 +67,9 @@ func chooseTeamName() -> (String) {
 func addTeam() {
     var newTeams = teams
     newTeams.append(team(name: chooseTeamName(), number: newTeams.count, score: 0))
+    for i in 0...newTeams.count - 1{
+        newTeams[i].number = i
+    }
     teams = newTeams
 }
 
