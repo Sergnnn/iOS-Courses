@@ -37,6 +37,7 @@
 		B39FEAC725D68697008F7399 /* CustomTeamVCLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEAC625D68697008F7399 /* CustomTeamVCLabel.swift */; };
 		B39FEACC25D68883008F7399 /* SeparatorLabelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEACB25D68883008F7399 /* SeparatorLabelColor.swift */; };
 		B39FEAD125D68E46008F7399 /* CustomWordsToGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEAD025D68E46008F7399 /* CustomWordsToGuess.swift */; };
+		B3AF98B525DFF7A300A02E00 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */; };
 		B3BA506F25C9EA910050CCAE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA506E25C9EA910050CCAE /* Model.swift */; };
 		B3BA507A25CAA9720050CCAE /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA507925CAA9720050CCAE /* TeamsCell.swift */; };
 		B3D22B5625D2B300005765C3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D22B5525D2B300005765C3 /* MainVC.swift */; };
@@ -99,6 +100,7 @@
 		B39FEAC625D68697008F7399 /* CustomTeamVCLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamVCLabel.swift; sourceTree = "<group>"; };
 		B39FEACB25D68883008F7399 /* SeparatorLabelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLabelColor.swift; sourceTree = "<group>"; };
 		B39FEAD025D68E46008F7399 /* CustomWordsToGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWordsToGuess.swift; sourceTree = "<group>"; };
+		B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		B3BA506E25C9EA910050CCAE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B3BA507925CAA9720050CCAE /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
 		B3D22B5525D2B300005765C3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				B312AAFC25D538D300987473 /* BackgroundImage.swift */,
+				B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */,
 				B316A23525D2D7A500B7D270 /* Cells */,
 				B316A23425D2D79D00B7D270 /* Labels */,
 				B316A23325D2D78200B7D270 /* Buttons */,
@@ -424,6 +427,7 @@
 				B30C07E825C457C800C5CFCD /* Data.swift in Sources */,
 				B39FEAD125D68E46008F7399 /* CustomWordsToGuess.swift in Sources */,
 				B33F759B25A8B598005FC372 /* WordsVC.swift in Sources */,
+				B3AF98B525DFF7A300A02E00 /* CustomSwitch.swift in Sources */,
 				B37485AF25A3C46E001004A9 /* CustomTitleLable.swift in Sources */,
 				B312AB0825D57A6A00987473 /* ResultsVC.swift in Sources */,
 				B34EBAB625D6968C00C26AEF /* ResultsTeamsCell.swift in Sources */,

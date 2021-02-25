@@ -67,16 +67,16 @@ func chooseTeamName() -> (String) {
 func addTeam() {
     var newTeams = teams
     newTeams.append(team(name: chooseTeamName(), number: newTeams.count, score: 0))
-    for i in 0...newTeams.count - 1{
-        newTeams[i].number = i
-    }
+    setTeamNumer()
     teams = newTeams
 }
 
-func deleteLastTeam() {
-    var newTeams = teams
-    newTeams.removeLast()
-    teams = newTeams
+func setTeamNumer() {
+    if teams.count != 0 {
+        for i in 0...teams.count - 1{
+            teams[i].number = i
+        }
+    }
 }
 
 func getWordsForTheGame() {
@@ -108,14 +108,27 @@ func updateTeamsAndResetCounters() {
         if teams[i].name == results[0].team {
             teams[i].score += results[0].score
         }
+        if results.count == 2 {
+            if teams[i].name == results[1].team {
+                teams[i].score += results[1].score
+            }
+        }
     }
     scoreOfTheRound = 0
     results[0].words.removeAll()
     results[0].wordIsCorrect.removeAll()
+    if results.count == 2 {results.removeLast()}
 }
 
-func checkForAWinner(teamNumber: Int) -> Bool {
-    if teams[teamNumber].score >= rules.amountOfWords {return true}
-    else {return false}
+
+func checkForWinnerAndLastRound() -> Bool {
+    var sortedArray = [team]()
+    
+    sortedArray = teams.sorted(by: {$0.score > $1.score})
+    
+    if teamNumber == teams.count - 1 && sortedArray[0].score >= rules.amountOfWords {
+        teamNumber = sortedArray[0].number
+        return true
+    } else {return false}
 }
 

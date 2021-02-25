@@ -10,65 +10,99 @@ import UIKit
 class GameVC: UIViewController {
 // MARK: - Variables
     var timer: Timer?
-    var timeLeft: Int = 2 //rules.roundTime
+    var timeLeft: Int = rules.roundTime
     var noTimeLeft: Bool = false
-  
+    var pauseTime: Int = 0
+    
     @IBOutlet weak var timerLbl: UILabel!
     @IBOutlet weak var scoreOfTheRoundLbl: UILabel!
     @IBOutlet weak var wordToGuess: UILabel!
-  
+    @IBOutlet weak var pauseView: UIView!
+    
 // MARK: - vieDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        pauseView.isHidden = true
         wordToGuess.isHidden = false
         wordToGuess.text = getRandomWordAndRemoveIt()
         timerLbl.text = "\(rules.roundTime)"
         results[0].team = teams[teamNumber].name
         setupTimer()
-        
-        
-        
     }
     
 
 // MARK: - Actions
     @IBAction func correctBtn(_ sender: Any) {
-        
         roundScoreCounter(true)
         setScoreOfTheRoundLbl()
         results[0].words.append(wordToGuess.text!)
         results[0].wordIsCorrect.append(true)
         results[0].score = scoreOfTheRound
-        
         wordToGuess.text = getRandomWordAndRemoveIt()
         
         debugPrint(results)
         
-        
         if noTimeLeft {
-            
             wordToGuess.isHidden = true
-            performSegue(withIdentifier: "ResultsVC", sender: nil)}
+            showAlert()
+        }
     }
     @IBAction func unCorrectBtn(_ sender: Any) {
-        
         roundScoreCounter(false)
         setScoreOfTheRoundLbl()
         results[0].words.append(wordToGuess.text!)
         results[0].wordIsCorrect.append(false)
         results[0].score = scoreOfTheRound
-        
         wordToGuess.text = getRandomWordAndRemoveIt()
         
         debugPrint(results)
         
         if noTimeLeft {
-            
             wordToGuess.isHidden = true
             performSegue(withIdentifier: "ResultsVC", sender: nil)}
     }
+    
+    @IBAction func pauseBtn(_ sender: Any) {
+        if timeLeft > 2{
+        pauseView.isHidden = false
+        pauseTime = timeLeft
+        }
+    }
+    @IBAction func unPauseBtn(_ sender: Any) {
+        timeLeft = pauseTime
+        noTimeLeft = false
+        wordToGuess.text = getRandomWordAndRemoveIt()
+        pauseView.isHidden = true
+    }
+    //MARK: - Config Alert
+        
+        func showAlert() {
+            let refreshAlert = UIAlertController(title: "Выберите команду, которая угадала слово:", message: "", preferredStyle: UIAlertController.Style.alert)
+            
+            for i in 0...teams.count - 1{
+                
+                refreshAlert.addAction(UIAlertAction(title: "\(teams[i].name)", style: .default, handler: { (action: UIAlertAction!) in
+                    debugPrint("Handle \(teams[i].name) logic here")
+                    self.addGeneralWord(teamName: teams[i].name)
+                    self.performSegue(withIdentifier: "ResultsVC", sender: nil)
+                }))
+            }
+
+            present(refreshAlert, animated: true, completion: nil)
+        }
+
+    func addGeneralWord(teamName: String) {
+        if results[0].team != teamName {
+            results.append(result(team: teamName, score: 1, words: [results[0].words.last!], wordIsCorrect: [true]))
+            results[0].score -= 1
+            results[0].wordIsCorrect.removeLast()
+            results[0].words.removeLast()
+        }
+    }
+
+
 // MARK: - Functions
     func setScoreOfTheRoundLbl() {
         scoreOfTheRoundLbl.text = String(scoreOfTheRound)
@@ -97,5 +131,4 @@ class GameVC: UIViewController {
     }
     
 }
-
 

@@ -23,7 +23,7 @@ class CustomTitleLable: UILabel {
     
     func CustomTitleLable() {
     
-        textColor = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 1)
+        textColor = #colorLiteral(red: 0.1253850758, green: 0.3137430847, blue: 0.2117321789, alpha: 1)
         font = UIFont(name: "Avenir", size: 22)
        
 

@@ -24,6 +24,7 @@ class TeamsCell: UITableViewCell {
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
         findAndDeleteTeam()
+        setTeamNumer()
         teamsCellDelegate?.deleteCell()
     }
     

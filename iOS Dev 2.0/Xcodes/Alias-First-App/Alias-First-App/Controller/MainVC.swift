@@ -35,7 +35,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
         
-        debugPrint(wordsForTheGame.count)
+        debugPrint(teams)
 
     }
     
@@ -48,6 +48,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell") as? MainCell {
             cell.backgroundColor = UIColor.clear
             cell.updateCell(team: teams[indexPath.row])
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell()
