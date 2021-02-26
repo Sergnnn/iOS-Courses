@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameVC: UIViewController {
 // MARK: - Variables
     var timer: Timer?
-    var timeLeft: Int = rules.roundTime
+    var timeLeft: Int = 15 //rules.roundTime
     var noTimeLeft: Bool = false
     var pauseTime: Int = 0
     
@@ -41,7 +42,8 @@ class GameVC: UIViewController {
         results[0].wordIsCorrect.append(true)
         results[0].score = scoreOfTheRound
         wordToGuess.text = getRandomWordAndRemoveIt()
-        
+        Vibration.success.vibrate()
+        Sounds.correctWord.play()
         debugPrint(results)
         
         if noTimeLeft {
@@ -56,7 +58,8 @@ class GameVC: UIViewController {
         results[0].wordIsCorrect.append(false)
         results[0].score = scoreOfTheRound
         wordToGuess.text = getRandomWordAndRemoveIt()
-        
+        Vibration.error.vibrate()
+        Sounds.unCorrectWord.play()
         debugPrint(results)
         
         if noTimeLeft {
@@ -67,12 +70,9 @@ class GameVC: UIViewController {
     @IBAction func pauseBtn(_ sender: Any) {
         if timeLeft > 2{
         pauseView.isHidden = false
-        pauseTime = timeLeft
         }
     }
     @IBAction func unPauseBtn(_ sender: Any) {
-        timeLeft = pauseTime
-        noTimeLeft = false
         wordToGuess.text = getRandomWordAndRemoveIt()
         pauseView.isHidden = true
     }
@@ -118,13 +118,16 @@ class GameVC: UIViewController {
 // MARK: - Timer
     func setupTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if self.pauseView.isHidden == false {return}
             if self.timeLeft != 0 {
                 self.timerLbl.text = "\(self.timeLeft) sec"
                 self.timeLeft -= 1
+                if self.timeLeft == 9 {Sounds.left10Sec.play()}
             } else {
                 timer.invalidate()
                 self.timerLbl.text = "Time is up..."
                 self.noTimeLeft = true
+                Sounds.noTimeLeft.play()
             }
         }
         

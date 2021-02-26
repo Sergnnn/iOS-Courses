@@ -52,12 +52,15 @@ class ResultsWordsCell: UITableViewCell {
             debugPrint(results)
         }
         
+        Vibration.light.vibrate()
         resultsWordsCellDelegate?.didTapRefreshButton()
     }
     
     func changeWordStatus(word: String, bool: Bool) {
-        for i in 0...results[0].words.count - 1 {
-            if word == results[0].words[i] {results[0].wordIsCorrect[i] = !results[0].wordIsCorrect[i]; updateScore(index: 0)}
+        if results.count == 1 {
+            for i in 0...results[0].words.count - 1 {
+                    if word == results[0].words[i] {results[0].wordIsCorrect[i] = !results[0].wordIsCorrect[i]; updateScore(index: 0)}
+            }
         }
         if results.count == 2{
             if word == results[1].words[0] {results[1].wordIsCorrect[0] = !results[1].wordIsCorrect[0]; updateScore(index: 1)}
@@ -100,12 +103,12 @@ class ResultsWordsCell: UITableViewCell {
                 }
             }
             
-            if results.count == 2{print("TRUE3")
+            if results.count == 2{
                 if word.text! == results[1].words[0] {results[1].words[0] = "\(results[1].words[0])(Общее)"}
             }
         }
         if bool == false {
-            if results.count == 1{print("FALSE1")
+            if results.count == 1{
                 if word.text! == results[0].words[results[0].words.count - 1] {
                     if let index = (results[0].words[results[0].words.count - 1].range(of: "(")?.lowerBound) {
                         results[0].words[results[0].words.count - 1] = String(results[0].words[results[0].words.count - 1].prefix(upTo: index))

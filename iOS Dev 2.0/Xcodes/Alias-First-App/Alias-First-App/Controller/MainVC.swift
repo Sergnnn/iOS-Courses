@@ -46,8 +46,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell") as? MainCell {
+            let teamsForMainVC = teams.sorted(by: {$0.score > $1.score })
             cell.backgroundColor = UIColor.clear
-            cell.updateCell(team: teams[indexPath.row])
+            cell.updateCell(team: teamsForMainVC[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }

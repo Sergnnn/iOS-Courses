@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class StartVC: UIViewController {
 
@@ -26,6 +28,7 @@ class StartVC: UIViewController {
         addTeam()
         addTeam()
     }
+ 
     
     @IBAction func newGameBtn(_ sender: Any) {
         

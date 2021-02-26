@@ -74,10 +74,9 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func playBtnPressed(_ sender: Any) {
         updateTeamsAndResetCounters()
         debugPrint(teams)
-        if checkForWinnerAndLastRound(){ debugPrint(teamNumber); performSegue(withIdentifier: "WinVC", sender: nil) }
+        if checkForWinnerAndLastRound(){ performSegue(withIdentifier: "WinVC", sender: nil) }
         else {
             nextTeamAndRoundCounter()
-            debugPrint(teamNumber)
             performSegue(withIdentifier: "MainVC", sender: nil)}
     }
     
@@ -93,21 +92,19 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         for i in 0...teams.count - 1{
             refreshAlert.addAction(UIAlertAction(title: "\(teams[i].name)", style: .default, handler: { (action: UIAlertAction!) in
                 debugPrint("\(teams[i].name) should get last word")
-                self.generalWord(teamName: teams[i].name) // FIX GENERAL WORD
+                self.generalWord(teamName: teams[i].name)
             }))
         }
         present(refreshAlert, animated: true, completion: nil)
     }
-    func generalWord(teamName: String) {// FIX GENERAL WORD
+    func generalWord(teamName: String) {
         print("general word funciton")
-        if teamName == results[0].team { results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1; print("old Team")}
+        if teamName == results[0].team { results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
         else {
             results.append(result(team: teamName, score: 1, words: [results[0].words[results[0].words.count - 1]], wordIsCorrect: [true]))
             results[1].words[0] = "\(results[1].words[0])(\(teamName))"
             results[0].wordIsCorrect.removeLast()
             results[0].words.removeLast()
-            print("new Team")
-            debugPrint(results)
             
         }
         didTapRefreshButton()
@@ -123,7 +120,6 @@ extension ResultsVC: ResultsWordsCellDelegate {
         self.teamTable.reloadData()
     }
     func lastWordsAlertForTrue() {
-        debugPrint("ALERT ACTION")
         self.showAlert()
     }
 }
