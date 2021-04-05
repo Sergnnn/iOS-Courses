@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RulesVC: UIViewController {
     
@@ -28,8 +29,10 @@ class RulesVC: UIViewController {
         roundTimeLabel.text = "\(Int(roundTimeSlider.value))"
         
         minusWordSwitch.isOn = false
-        generalWordSwitch.isOn = false
-        soundInGameSwitch.isOn = false
+        generalWordSwitch.isOn = true
+        soundInGameSwitch.isOn = true
+        
+        roundCounter = 1
         
     }
     
@@ -54,11 +57,11 @@ class RulesVC: UIViewController {
         rules.generalWord = generalWordSwitch.isOn
         rules.soundInGame = soundInGameSwitch.isOn
 
-        print(rules.amountOfWords)
-        print(rules.roundTime)
-        print(rules.minusWord)
-        print(rules.generalWord)
-        print(rules.soundInGame)
+        debugPrint("Amount of words - \(rules.amountOfWords)")
+        debugPrint("Round Time - \(rules.roundTime)")
+        debugPrint("Minus Words - \(rules.minusWord)")
+        debugPrint("GeneralWord - \(rules.generalWord)")
+        debugPrint("Sounds - \(rules.soundInGame)")
     }
     
 }

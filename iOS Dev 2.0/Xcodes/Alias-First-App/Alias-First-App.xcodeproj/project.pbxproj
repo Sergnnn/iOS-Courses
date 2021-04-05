@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B30C07D925C44FEA00C5CFCD /* WordsCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07D825C44FEA00C5CFCD /* WordsCategoryCell.swift */; };
-		B30C07E325C4510500C5CFCD /* Alias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B30C07E125C4510500C5CFCD /* Alias.xcdatamodeld */; };
 		B30C07E825C457C800C5CFCD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C07E725C457C800C5CFCD /* Data.swift */; };
 		B312AAFD25D538D300987473 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312AAFC25D538D300987473 /* BackgroundImage.swift */; };
 		B312AB0225D53C1F00987473 /* CustomTeamNameOnMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312AB0125D53C1F00987473 /* CustomTeamNameOnMainVC.swift */; };
@@ -27,6 +26,7 @@
 		B35BC98725E9374300A1AC7F /* noTimeLeft.wav in Resources */ = {isa = PBXBuildFile; fileRef = B35BC98625E9374300A1AC7F /* noTimeLeft.wav */; };
 		B35BC98C25E937B200A1AC7F /* correctWord.wav in Resources */ = {isa = PBXBuildFile; fileRef = B35BC98B25E937B200A1AC7F /* correctWord.wav */; };
 		B35BC99125E9380500A1AC7F /* unCorrectWord.wav in Resources */ = {isa = PBXBuildFile; fileRef = B35BC99025E9380500A1AC7F /* unCorrectWord.wav */; };
+		B35BC9EE25EE780500A1AC7F /* ContinueGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BC9ED25EE780500A1AC7F /* ContinueGameService.swift */; };
 		B374854F25A3B81E001004A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374854E25A3B81E001004A9 /* AppDelegate.swift */; };
 		B374855125A3B81E001004A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374855025A3B81E001004A9 /* SceneDelegate.swift */; };
 		B374855325A3B81E001004A9 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374855225A3B81E001004A9 /* StartVC.swift */; };
@@ -41,16 +41,21 @@
 		B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485A925A3C165001004A9 /* CustomBackButton.swift */; };
 		B37485AF25A3C46E001004A9 /* CustomTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */; };
 		B37485B425A3C6D7001004A9 /* CustomNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37485B325A3C6D7001004A9 /* CustomNextButton.swift */; };
+		B385B6E026020DFD001CE395 /* CustomGuessedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B6DF26020DFD001CE395 /* CustomGuessedWords.swift */; };
 		B39FEAC725D68697008F7399 /* CustomTeamVCLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEAC625D68697008F7399 /* CustomTeamVCLabel.swift */; };
 		B39FEACC25D68883008F7399 /* SeparatorLabelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEACB25D68883008F7399 /* SeparatorLabelColor.swift */; };
 		B39FEAD125D68E46008F7399 /* CustomWordsToGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FEAD025D68E46008F7399 /* CustomWordsToGuess.swift */; };
 		B3AF98B525DFF7A300A02E00 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */; };
 		B3BA506F25C9EA910050CCAE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA506E25C9EA910050CCAE /* Model.swift */; };
 		B3BA507A25CAA9720050CCAE /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA507925CAA9720050CCAE /* TeamsCell.swift */; };
+		B3C1F3ED25F1092A0085AEBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C1F3EC25F109290085AEBD /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B3C5D5502615EFC600D8F488 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5D54F2615EFC600D8F488 /* Stroke.swift */; };
+		B3C5D5552615F03700D8F488 /* CustomLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5D5542615F03700D8F488 /* CustomLogo.swift */; };
 		B3D22B5625D2B300005765C3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D22B5525D2B300005765C3 /* MainVC.swift */; };
 		B3D22B5B25D2B310005765C3 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D22B5A25D2B310005765C3 /* GameVC.swift */; };
 		B3DF699525A4AB4C003797B3 /* CustomSubTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */; };
 		B3DF699D25A4AC29003797B3 /* CustomNumberTitleForRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */; };
+		B3F69B7F25F1170900100E07 /* Alias-First-App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3F69B7D25F1170900100E07 /* Alias-First-App.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +77,6 @@
 
 /* Begin PBXFileReference section */
 		B30C07D825C44FEA00C5CFCD /* WordsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCategoryCell.swift; sourceTree = "<group>"; };
-		B30C07E225C4510500C5CFCD /* Alias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alias.xcdatamodel; sourceTree = "<group>"; };
 		B30C07E725C457C800C5CFCD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B312AAFC25D538D300987473 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		B312AB0125D53C1F00987473 /* CustomTeamNameOnMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamNameOnMainVC.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		B35BC98625E9374300A1AC7F /* noTimeLeft.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = noTimeLeft.wav; sourceTree = "<group>"; };
 		B35BC98B25E937B200A1AC7F /* correctWord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctWord.wav; sourceTree = "<group>"; };
 		B35BC99025E9380500A1AC7F /* unCorrectWord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = unCorrectWord.wav; sourceTree = "<group>"; };
+		B35BC9ED25EE780500A1AC7F /* ContinueGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueGameService.swift; sourceTree = "<group>"; };
 		B374854B25A3B81E001004A9 /* Alias-First-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alias-First-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B374854E25A3B81E001004A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B374855025A3B81E001004A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,16 +116,21 @@
 		B37485A925A3C165001004A9 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		B37485AE25A3C46E001004A9 /* CustomTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleLable.swift; sourceTree = "<group>"; };
 		B37485B325A3C6D7001004A9 /* CustomNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNextButton.swift; sourceTree = "<group>"; };
+		B385B6DF26020DFD001CE395 /* CustomGuessedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGuessedWords.swift; sourceTree = "<group>"; };
 		B39FEAC625D68697008F7399 /* CustomTeamVCLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTeamVCLabel.swift; sourceTree = "<group>"; };
 		B39FEACB25D68883008F7399 /* SeparatorLabelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLabelColor.swift; sourceTree = "<group>"; };
 		B39FEAD025D68E46008F7399 /* CustomWordsToGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWordsToGuess.swift; sourceTree = "<group>"; };
 		B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		B3BA506E25C9EA910050CCAE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B3BA507925CAA9720050CCAE /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
+		B3C1F3EC25F109290085AEBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B3C5D54F2615EFC600D8F488 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		B3C5D5542615F03700D8F488 /* CustomLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLogo.swift; sourceTree = "<group>"; };
 		B3D22B5525D2B300005765C3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B3D22B5A25D2B310005765C3 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubTitleLable.swift; sourceTree = "<group>"; };
 		B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberTitleForRules.swift; sourceTree = "<group>"; };
+		B3F69B7E25F1170900100E07 /* Alias-First-App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Alias-First-App.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35BC97E25E9353400A1AC7F /* AVFoundation.framework in Frameworks */,
+				B3C1F3ED25F1092A0085AEBD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +187,12 @@
 				B39FEAD025D68E46008F7399 /* CustomWordsToGuess.swift */,
 				B31D56A925DC20A5003BD5C6 /* CustomWinnerLabel.swift */,
 				B3DF699425A4AB4C003797B3 /* CustomSubTitleLable.swift */,
+				B385B6DF26020DFD001CE395 /* CustomGuessedWords.swift */,
 				B3DF699C25A4AC29003797B3 /* CustomNumberTitleForRules.swift */,
 				B312AB0125D53C1F00987473 /* CustomTeamNameOnMainVC.swift */,
 				B39FEAC625D68697008F7399 /* CustomTeamVCLabel.swift */,
 				B39FEACB25D68883008F7399 /* SeparatorLabelColor.swift */,
+				B3C5D5542615F03700D8F488 /* CustomLogo.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -201,6 +214,8 @@
 			children = (
 				B35BC96725E91CC500A1AC7F /* Vibration.swift */,
 				B35BC96F25E9237400A1AC7F /* Sounds.swift */,
+				B35BC9ED25EE780500A1AC7F /* ContinueGameService.swift */,
+				B3C5D54F2615EFC600D8F488 /* Stroke.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 		B35BC97B25E9352D00A1AC7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3C1F3EC25F109290085AEBD /* CoreData.framework */,
 				B35BC97C25E9352E00A1AC7F /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -258,8 +274,8 @@
 				B374855425A3B81E001004A9 /* Main.storyboard */,
 				B374855725A3B820001004A9 /* Assets.xcassets */,
 				B374855925A3B820001004A9 /* LaunchScreen.storyboard */,
+				B3F69B7D25F1170900100E07 /* Alias-First-App.xcdatamodeld */,
 				B374855C25A3B820001004A9 /* Info.plist */,
-				B30C07E125C4510500C5CFCD /* Alias.xcdatamodeld */,
 			);
 			path = "Alias-First-App";
 			sourceTree = "<group>";
@@ -454,9 +470,9 @@
 				B374855325A3B81E001004A9 /* StartVC.swift in Sources */,
 				B37485A525A3C10F001004A9 /* TeamsVC.swift in Sources */,
 				B37485B425A3C6D7001004A9 /* CustomNextButton.swift in Sources */,
-				B30C07E325C4510500C5CFCD /* Alias.xcdatamodeld in Sources */,
 				B3BA507A25CAA9720050CCAE /* TeamsCell.swift in Sources */,
 				B31D569525DBFC4E003BD5C6 /* CustomMenueButton.swift in Sources */,
+				B385B6E026020DFD001CE395 /* CustomGuessedWords.swift in Sources */,
 				B312AB0225D53C1F00987473 /* CustomTeamNameOnMainVC.swift in Sources */,
 				B34EBABB25D696A600C26AEF /* ResultsWordsCell.swift in Sources */,
 				B374859D25A3BF67001004A9 /* RulesVC.swift in Sources */,
@@ -464,6 +480,7 @@
 				B37485AA25A3C165001004A9 /* CustomBackButton.swift in Sources */,
 				B35BC97025E9237400A1AC7F /* Sounds.swift in Sources */,
 				B3BA506F25C9EA910050CCAE /* Model.swift in Sources */,
+				B3F69B7F25F1170900100E07 /* Alias-First-App.xcdatamodeld in Sources */,
 				B3DF699D25A4AC29003797B3 /* CustomNumberTitleForRules.swift in Sources */,
 				B3DF699525A4AB4C003797B3 /* CustomSubTitleLable.swift in Sources */,
 				B3D22B5B25D2B310005765C3 /* GameVC.swift in Sources */,
@@ -472,6 +489,7 @@
 				B312AAFD25D538D300987473 /* BackgroundImage.swift in Sources */,
 				B374854F25A3B81E001004A9 /* AppDelegate.swift in Sources */,
 				B30C07D925C44FEA00C5CFCD /* WordsCategoryCell.swift in Sources */,
+				B35BC9EE25EE780500A1AC7F /* ContinueGameService.swift in Sources */,
 				B39FEACC25D68883008F7399 /* SeparatorLabelColor.swift in Sources */,
 				B316A22925D2C35900B7D270 /* MainCell.swift in Sources */,
 				B3D22B5625D2B300005765C3 /* MainVC.swift in Sources */,
@@ -480,11 +498,13 @@
 				B39FEAD125D68E46008F7399 /* CustomWordsToGuess.swift in Sources */,
 				B33F759B25A8B598005FC372 /* WordsVC.swift in Sources */,
 				B3AF98B525DFF7A300A02E00 /* CustomSwitch.swift in Sources */,
+				B3C5D5502615EFC600D8F488 /* Stroke.swift in Sources */,
 				B37485AF25A3C46E001004A9 /* CustomTitleLable.swift in Sources */,
 				B312AB0825D57A6A00987473 /* ResultsVC.swift in Sources */,
 				B34EBAB625D6968C00C26AEF /* ResultsTeamsCell.swift in Sources */,
 				B374855125A3B81E001004A9 /* SceneDelegate.swift in Sources */,
 				B31D56A525DC1F59003BD5C6 /* WinVC.swift in Sources */,
+				B3C5D5552615F03700D8F488 /* CustomLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +690,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Alias-First-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -689,7 +709,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Alias-First-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -819,13 +839,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B30C07E125C4510500C5CFCD /* Alias.xcdatamodeld */ = {
+		B3F69B7D25F1170900100E07 /* Alias-First-App.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B30C07E225C4510500C5CFCD /* Alias.xcdatamodel */,
+				B3F69B7E25F1170900100E07 /* Alias-First-App.xcdatamodel */,
 			);
-			currentVersion = B30C07E225C4510500C5CFCD /* Alias.xcdatamodel */;
-			path = Alias.xcdatamodeld;
+			currentVersion = B3F69B7E25F1170900100E07 /* Alias-First-App.xcdatamodel */;
+			path = "Alias-First-App.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

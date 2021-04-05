@@ -26,7 +26,7 @@ class CustomBigButton: UIButton {
         layer.backgroundColor = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 0.2549976071)
         layer.cornerRadius = 25.0
         setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , for: .normal)
-        titleLabel?.font = UIFont(name: "Avenir-Medium", size: 22)
+        titleLabel?.font = UIFont(name: "Avenir", size: 22)
     }
     
     

@@ -23,7 +23,7 @@ class CustomTeamVCLabel: UILabel {
     
     func TeamVCLabel() {
     
-        textColor = #colorLiteral(red: 0.02392357588, green: 0.1488352716, blue: 0.4753955007, alpha: 1)
+        textColor = #colorLiteral(red: 0.1253850758, green: 0.3137430847, blue: 0.2117321789, alpha: 1)
         font = UIFont(name: "Avenir", size: 22)
        
 

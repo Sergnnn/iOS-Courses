@@ -9,10 +9,13 @@ import UIKit
 
 protocol ResultsWordsCellDelegate {
     func didTapRefreshButton()
-    func lastWordsAlertForTrue()
+    func lastWordsAlertForTrue(generalWordRule: Bool)
 }
 
 class ResultsWordsCell: UITableViewCell {
+    
+    let imageTickT = UIImage(named: "tickT")
+    let imageTickF = UIImage(named: "tickF")
 
     @IBOutlet weak var word: UILabel!
     @IBOutlet weak var TFBtn: UIButton!
@@ -20,18 +23,19 @@ class ResultsWordsCell: UITableViewCell {
     
     func updateCell(wordIncmoing: String, tf: Bool) {
         word.text = wordIncmoing
-        TFBtn.setTitle("\(tf)", for: .normal)
+        TFBtn.setTitle(nil, for: .normal)
+        setTitleImageFromBool(tf: tf)
     }
     
     @IBAction func TFBtnPressed(_ sender: Any) {
         
-        TFBtnCondition: if TFBtn.title(for: .normal) == "false" {
+        TFBtnCondition: if TFBtn.image(for: .normal) == imageTickF {
             
             if results.count == 1 {
                 if word.text! == results[0].words[results[0].words.count - 1]{
-                    resultsWordsCellDelegate?.lastWordsAlertForTrue()
+                    resultsWordsCellDelegate?.lastWordsAlertForTrue(generalWordRule: rules.generalWord)
                     TFBtn.setTitle("true", for: .normal)
-                    generealTitleHandlign(bool: true)
+                    generealTitleHandlign(bool: true, rules: rules.generalWord)
                     print("BREAK!!!")
                     break TFBtnCondition
                 }
@@ -39,34 +43,40 @@ class ResultsWordsCell: UITableViewCell {
             
             TFBtn.setTitle("true", for: .normal)
             changeWordStatus(word: word.text!, bool: true)
-            generealTitleHandlign(bool: true)
+            generealTitleHandlign(bool: true, rules: rules.generalWord)
             
-            //debugPrint("False tapped")
+            debugPrint("False tapped")
             debugPrint(results)
         } else {
             TFBtn.setTitle("false", for: .normal)
             changeWordStatus(word: word.text!,bool: false)
             changeLastWordStatus(words: word.text!, bool: false)
-            generealTitleHandlign(bool: false)
-            //debugPrint("True tapped")
+            generealTitleHandlign(bool: false, rules: rules.generalWord)
+            debugPrint("True tapped")
             debugPrint(results)
         }
         
         Vibration.light.vibrate()
         resultsWordsCellDelegate?.didTapRefreshButton()
+        debugPrint("RESULTS BTN")
     }
     
     func changeWordStatus(word: String, bool: Bool) {
-        if results.count == 1 {
+        if results[0].words.count == 0 { if word == results[1].words[0] {results[1].wordIsCorrect[0] = !results[1].wordIsCorrect[0]; updateScore(index: 0)}}
+        else{
             for i in 0...results[0].words.count - 1 {
-                    if word == results[0].words[i] {results[0].wordIsCorrect[i] = !results[0].wordIsCorrect[i]; updateScore(index: 0)}
+                        if word == results[0].words[i] {results[0].wordIsCorrect[i] = !results[0].wordIsCorrect[i]; updateScore(index: 0)}
+                }
+            if results.count == 2{
+                if word == results[1].words[0] {results[1].wordIsCorrect[0] = !results[1].wordIsCorrect[0]; updateScore(index: 1)}
             }
+            else{return}
         }
-        if results.count == 2{
-            if word == results[1].words[0] {results[1].wordIsCorrect[0] = !results[1].wordIsCorrect[0]; updateScore(index: 1)}
-        }
-        else{return}
-        
+    }
+    
+    func setTitleImageFromBool (tf:Bool) {
+        if tf {TFBtn.setImage(imageTickT, for: .normal)}
+        else {TFBtn.setImage(imageTickF, for: .normal)}
     }
     
     func updateScore (index: Int){
@@ -90,42 +100,44 @@ class ResultsWordsCell: UITableViewCell {
         }
     }
     
-    func generealTitleHandlign(bool: Bool){
-        if bool == true {
-            if results.count == 1{
-                if let index = (results[0].words[results[0].words.count - 1].range(of: "(")?.lowerBound) {
-                    results[0].words[results[0].words.count - 1] = String(results[0].words[results[0].words.count - 1].prefix(upTo: index))
-                }
-            }
-            if results.count == 2{
-                if let index = (results[1].words[0].range(of: "(")?.lowerBound) {
-                    results[1].words[0] = String(results[1].words[0].prefix(upTo: index))
-                }
-            }
-            
-            if results.count == 2{
-                if word.text! == results[1].words[0] {results[1].words[0] = "\(results[1].words[0])(Общее)"}
-            }
-        }
-        if bool == false {
-            if results.count == 1{
-                if word.text! == results[0].words[results[0].words.count - 1] {
-                    if let index = (results[0].words[results[0].words.count - 1].range(of: "(")?.lowerBound) {
-                        results[0].words[results[0].words.count - 1] = String(results[0].words[results[0].words.count - 1].prefix(upTo: index))
+    func generealTitleHandlign(bool: Bool, rules: Bool){
+        if rules == false {return}
+            else {
+                if bool == true {
+                    if results.count == 1{
+                        if let index = (results[0].words[results[0].words.count - 1].range(of: "(")?.lowerBound) {
+                            results[0].words[results[0].words.count - 1] = String(results[0].words[results[0].words.count - 1].prefix(upTo: index))
+                        }
                     }
-                    results[0].words[results[0].words.count - 1] = "\(results[0].words[results[0].words.count - 1])(Общее)"
-                }
-            }
-            
-            if results.count == 2{
-                if word.text! == results[1].words[0] {
-                    if let index = (results[1].words[0].range(of: "(")?.lowerBound) {
-                        results[1].words[0] = String(results[1].words[0].prefix(upTo: index))
+                    if results.count == 2{
+                        if let index = (results[1].words[0].range(of: "(")?.lowerBound) {
+                            results[1].words[0] = String(results[1].words[0].prefix(upTo: index))
+                        }
                     }
-                    results[1].words[0] = "\(results[1].words[0])(Общее)"}
-            }
+                    
+                    if results.count == 2{
+                        if word.text! == results[1].words[0] {results[1].words[0] = "\(results[1].words[0])(Общее)"}
+                    }
+                }
+                if bool == false {
+                    if results.count == 1{
+                        if word.text! == results[0].words[results[0].words.count - 1] {
+                            if let index = (results[0].words[results[0].words.count - 1].range(of: "(")?.lowerBound) {
+                                results[0].words[results[0].words.count - 1] = String(results[0].words[results[0].words.count - 1].prefix(upTo: index))
+                            }
+                            results[0].words[results[0].words.count - 1] = "\(results[0].words[results[0].words.count - 1])(Общее)"
+                        }
+                    }
+                    
+                    if results.count == 2{
+                        if word.text! == results[1].words[0] {
+                            if let index = (results[1].words[0].range(of: "(")?.lowerBound) {
+                                results[1].words[0] = String(results[1].words[0].prefix(upTo: index))
+                            }
+                            results[1].words[0] = "\(results[1].words[0])(Общее)"}
+                    }
+                }
         }
     }
-    
     
 }

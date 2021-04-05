@@ -7,18 +7,25 @@
 
 import UIKit
 
-class WordsCategoryCell: UICollectionViewCell {
+protocol WordsCategoryCellDelegate {
+    func buttonPressed(index: IndexPath)
+}
 
-    @IBOutlet weak var wordsCategoryName: UILabel!
-    @IBOutlet weak var wordsCategoryImage: UIImageView!
-    @IBOutlet weak var categoryIsEnable: UIImageView!
+class WordsCategoryCell: UICollectionViewCell {
     
+    var indexPath: IndexPath?
+    var wordsCategoryCellDelegate: WordsCategoryCellDelegate?
+
+    @IBOutlet weak var wordsBtn: UIButton!
     
     func updateCell(word: word) {
-        wordsCategoryName.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        wordsCategoryName.text = word.categoryName
-        wordsCategoryImage.image = UIImage(named: word.categoryImageName)
-        categoryIsEnable.isHidden = !word.categoryIsEnable
+        let image = UIImage(named: word.categoryImageName)
+        wordsBtn.setTitle(nil, for: .normal)
+        wordsBtn.setImage(image, for: .normal)
     }
-
+    
+     @IBAction func wordsBtnTapped(_ sender: Any) {
+        wordsCategoryCellDelegate?.buttonPressed(index: indexPath!)
+    }
+    
 }

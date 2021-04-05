@@ -23,7 +23,7 @@ class CustomNumberTitleForRules: UILabel {
     
     func CustomNumberTitleForRules() {
     
-        textColor = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 1)
+        textColor = #colorLiteral(red: 0.9098187089, green: 0.3176635206, blue: 0.1137945428, alpha: 1)
         font = UIFont(name: "Avenir", size: 30)
        
 

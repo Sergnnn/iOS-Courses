@@ -24,5 +24,6 @@ class CustomSwitch: UISwitch {
     func CS() {
         
           thumbTintColor = nil
+        onTintColor = #colorLiteral(red: 0.9098187089, green: 0.3176635206, blue: 0.1137945428, alpha: 1)
     }
 }

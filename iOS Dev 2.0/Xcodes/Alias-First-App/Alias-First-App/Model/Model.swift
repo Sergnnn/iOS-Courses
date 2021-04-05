@@ -46,7 +46,7 @@ var teamNumber: Int = 0
 var results = [result(team: "", score: 0, words: [], wordIsCorrect: [])]
 
 
-let teamsFile: [String] = ["Коты", "Собаки", "Ниндзи", "Живчиикии", "Роботы", "Приведения", "Косатики", "Лорды", "Фиксики", "Брины", "Еноты", "Динамо", "Шахтер"]
+
 var teamNames = teamsFile
 var teams = [team]()
 var rules = rulesStructure(amountOfWords: 0, roundTime: 0, minusWord: false, generalWord: false, soundInGame: false)
@@ -91,6 +91,8 @@ func getWordsForTheGame() {
 }
     
 func getRandomWordAndRemoveIt() -> String{
+        if wordsForTheGame.count == 1 {getWordsForTheGame()}
+        
         let randomNumber = Int.random(in: 0...wordsForTheGame.count - 1)
         let randomWord = wordsForTheGame[randomNumber]
         wordsForTheRound.append(randomWord)

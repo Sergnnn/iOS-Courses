@@ -16,6 +16,4 @@ class ResultsTeamsCell: UITableViewCell {
         teamName.text = result.team
         score.text = "\(result.score)"
     }
-
-
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        
@@ -20,6 +21,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        deleteData()
+        savedata()
         teamsTable.delegate = self
         teamsTable.dataSource = self
         teamsTable.isScrollEnabled = false

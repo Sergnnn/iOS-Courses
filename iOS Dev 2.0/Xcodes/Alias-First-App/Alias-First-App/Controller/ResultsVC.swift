@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 
@@ -74,9 +75,10 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func playBtnPressed(_ sender: Any) {
         updateTeamsAndResetCounters()
         debugPrint(teams)
-        if checkForWinnerAndLastRound(){ performSegue(withIdentifier: "WinVC", sender: nil) }
+        if checkForWinnerAndLastRound(){ performSegue(withIdentifier: "WinVC", sender: nil)}
         else {
             nextTeamAndRoundCounter()
+            DispatchQueue.global().async {deleteData(); savedata()}
             performSegue(withIdentifier: "MainVC", sender: nil)}
     }
     
@@ -109,18 +111,22 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         didTapRefreshButton()
     }
+    
+   
 }
 
 
 
 //MARK: - Extension
 extension ResultsVC: ResultsWordsCellDelegate {
+ 
     func didTapRefreshButton() {
         self.wordsTable.reloadData()
         self.teamTable.reloadData()
     }
-    func lastWordsAlertForTrue() {
-        self.showAlert()
+    func lastWordsAlertForTrue(generalWordRule: Bool) {
+        if generalWordRule { self.showAlert()}
+        else {results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
     }
 }
 

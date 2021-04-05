@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class TeamsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    

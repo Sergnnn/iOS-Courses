@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class WinVC: UIViewController {
 
@@ -13,7 +14,7 @@ class WinVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        deleteData()
         teamName.text = "\(teams[teamNumber].name)"
         
     }

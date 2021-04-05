@@ -6,12 +6,12 @@
 //
 
 import UIKit
-
+import CoreData
 
 
 class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
-    
+
   
     @IBOutlet weak var wordsCategoryCollection: UICollectionView!
     
@@ -35,20 +35,12 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WordsCategoryCell", for: indexPath) as? WordsCategoryCell {
             cell.backgroundColor = UIColor.clear
+            cell.wordsCategoryCellDelegate = self
+            cell.indexPath = indexPath
             cell.updateCell(word: words[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if words[indexPath.row].categoryIsEnable == true {
-            words[indexPath.row].categoryIsEnable = false
-        } else {
-            words[indexPath.row].categoryIsEnable = true
-        }
-        wordsCategoryCollection.reloadData()
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,12 +48,33 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
     
     @IBAction func playBtn(_ sender: Any) {
-        var allDisabel = true
-        for i in 0...words.count - 1{
-            allDisabel = allDisabel && !words[i].categoryIsEnable
-        }
-        if allDisabel {
-            words[0].categoryIsEnable = true
-        }
+        performSegue(withIdentifier: "MainVC", sender: nil)
     }
 }
+
+//MARK: - Extension
+extension WordsVC: WordsCategoryCellDelegate {
+    func buttonPressed(index: IndexPath) {
+        let cell = wordsCategoryCollection.cellForItem(at: index) as! WordsCategoryCell
+        if words[index.row].categoryIsEnable == true {
+                words[index.row].categoryIsEnable = false
+                words[index.row].categoryImageName.removeLast()
+                words[index.row].categoryImageName.append("F")
+              } else {
+                words[index.row].categoryIsEnable = true
+                words[index.row].categoryImageName.removeLast()
+                words[index.row].categoryImageName.append("T")
+              }
+
+       
+        let image = UIImage(named: words[index.row].categoryImageName)
+        cell.wordsBtn.setImage(image, for: .normal)
+        debugPrint("\(words[0].categoryImageName) - \(words[0].categoryIsEnable)")
+        debugPrint("\(words[1].categoryImageName) - \(words[1].categoryIsEnable)")
+        debugPrint("\(words[2].categoryImageName) - \(words[2].categoryIsEnable)")
+    }
+}
+    
+
+
+

@@ -7,11 +7,12 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class GameVC: UIViewController {
 // MARK: - Variables
     var timer: Timer?
-    var timeLeft: Int = 15 //rules.roundTime
+    var timeLeft: Int = 5 //rules.roundTime
     var noTimeLeft: Bool = false
     var pauseTime: Int = 0
     
@@ -43,12 +44,12 @@ class GameVC: UIViewController {
         results[0].score = scoreOfTheRound
         wordToGuess.text = getRandomWordAndRemoveIt()
         Vibration.success.vibrate()
-        Sounds.correctWord.play()
+        Sounds.correctWord.play(OnOff: rules.soundInGame)
         debugPrint(results)
         
         if noTimeLeft {
             wordToGuess.isHidden = true
-            showAlert()
+            showAlert(generalWord: rules.generalWord)
         }
     }
     @IBAction func unCorrectBtn(_ sender: Any) {
@@ -59,7 +60,7 @@ class GameVC: UIViewController {
         results[0].score = scoreOfTheRound
         wordToGuess.text = getRandomWordAndRemoveIt()
         Vibration.error.vibrate()
-        Sounds.unCorrectWord.play()
+        Sounds.unCorrectWord.play(OnOff: rules.soundInGame)
         debugPrint(results)
         
         if noTimeLeft {
@@ -78,7 +79,8 @@ class GameVC: UIViewController {
     }
     //MARK: - Config Alert
         
-        func showAlert() {
+    func showAlert(generalWord: Bool) {
+        if generalWord {
             let refreshAlert = UIAlertController(title: "Выберите команду, которая угадала слово:", message: "", preferredStyle: UIAlertController.Style.alert)
             
             for i in 0...teams.count - 1{
@@ -92,10 +94,12 @@ class GameVC: UIViewController {
 
             present(refreshAlert, animated: true, completion: nil)
         }
+        else { self.performSegue(withIdentifier: "ResultsVC", sender: nil)}
+        }
 
     func addGeneralWord(teamName: String) {
         if results[0].team != teamName {
-            results.append(result(team: teamName, score: 1, words: [results[0].words.last!], wordIsCorrect: [true]))
+            results.append(result(team: teamName, score: 1, words: ["\(results[0].words.last!)(\(teamName))"], wordIsCorrect: [true]))
             results[0].score -= 1
             results[0].wordIsCorrect.removeLast()
             results[0].words.removeLast()
@@ -122,12 +126,12 @@ class GameVC: UIViewController {
             if self.timeLeft != 0 {
                 self.timerLbl.text = "\(self.timeLeft) sec"
                 self.timeLeft -= 1
-                if self.timeLeft == 9 {Sounds.left10Sec.play()}
+                if self.timeLeft == 9 {Sounds.left10Sec.play(OnOff: rules.soundInGame)}
             } else {
                 timer.invalidate()
                 self.timerLbl.text = "Time is up..."
                 self.noTimeLeft = true
-                Sounds.noTimeLeft.play()
+                Sounds.noTimeLeft.play(OnOff: rules.soundInGame)
             }
         }
         

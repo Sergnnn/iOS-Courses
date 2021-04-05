@@ -23,7 +23,7 @@ class CustomWinnerLabel: UILabel {
     
     func winnerLabel() {
     
-        textColor = #colorLiteral(red: 0.8515639305, green: 0, blue: 0.2817598879, alpha: 1)
+        textColor = #colorLiteral(red: 0.9098187089, green: 0.3176635206, blue: 0.1137945428, alpha: 1)
         font = UIFont(name: "Avenir", size: 35)
        
 
