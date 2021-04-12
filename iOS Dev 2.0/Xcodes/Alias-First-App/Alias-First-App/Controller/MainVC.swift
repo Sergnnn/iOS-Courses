@@ -39,6 +39,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
         debugPrint(teams)
+        debugPrint(rules)
 
     }
     

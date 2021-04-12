@@ -23,7 +23,7 @@ class CustomLogo: UILabel {
     
     func logo() {
         self.attributedText = NSMutableAttributedString(string: "Alias",
-        attributes: stroke(font: UIFont(name: "Avenir-Heavy", size: 72)!,
+        attributes: stroke(font: UIFont(name: "Avenir-Heavy", size: 100)!,
                            strokeWidth: 3, insideColor: .clear, strokeColor: #colorLiteral(red: 0.1253850758, green: 0.3137430847, blue: 0.2117321789, alpha: 1)))
     }
 

@@ -94,14 +94,22 @@ class ResultsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         for i in 0...teams.count - 1{
             refreshAlert.addAction(UIAlertAction(title: "\(teams[i].name)", style: .default, handler: { (action: UIAlertAction!) in
                 debugPrint("\(teams[i].name) should get last word")
-                self.generalWord(teamName: teams[i].name)
+                self.generalWord(teamName: teams[i].name, minusRule: rules.minusWord)
             }))
         }
         present(refreshAlert, animated: true, completion: nil)
     }
-    func generalWord(teamName: String) {
+    func generalWord(teamName: String, minusRule: Bool) {
         print("general word funciton")
-        if teamName == results[0].team { results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
+        if teamName == results[0].team {
+            if minusRule == false {
+                results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true
+                results[0].score += 1
+            } else {
+                results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true
+                results[0].score += 1
+            }
+        }
         else {
             results.append(result(team: teamName, score: 1, words: [results[0].words[results[0].words.count - 1]], wordIsCorrect: [true]))
             results[1].words[0] = "\(results[1].words[0])(\(teamName))"
@@ -124,10 +132,13 @@ extension ResultsVC: ResultsWordsCellDelegate {
         self.wordsTable.reloadData()
         self.teamTable.reloadData()
     }
-    func lastWordsAlertForTrue(generalWordRule: Bool) {
-        if generalWordRule { self.showAlert()}
-        else {results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
-    }
+    func lastWordsAlertForTrue(generalWordRule: Bool, minusRule: Bool) {
+        if generalWordRule {self.showAlert()}
+            else {
+                if minusRule == false {results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
+                else{results[0].wordIsCorrect[results[0].wordIsCorrect.count - 1] = true ;results[0].score += 1}
+            }
+        }
 }
 
 

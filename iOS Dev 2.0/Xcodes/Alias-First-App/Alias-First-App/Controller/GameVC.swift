@@ -12,7 +12,7 @@ import CoreData
 class GameVC: UIViewController {
 // MARK: - Variables
     var timer: Timer?
-    var timeLeft: Int = 5 //rules.roundTime
+    var timeLeft: Int = rules.roundTime
     var noTimeLeft: Bool = false
     var pauseTime: Int = 0
     
@@ -20,24 +20,29 @@ class GameVC: UIViewController {
     @IBOutlet weak var scoreOfTheRoundLbl: UILabel!
     @IBOutlet weak var wordToGuess: UILabel!
     @IBOutlet weak var pauseView: UIView!
+    @IBOutlet weak var glow: UIImageView!
+    
+    
+    
     
 // MARK: - vieDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         pauseView.isHidden = true
         wordToGuess.isHidden = false
         wordToGuess.text = getRandomWordAndRemoveIt()
         timerLbl.text = "\(rules.roundTime)"
         results[0].team = teams[teamNumber].name
         setupTimer()
+
     }
     
 
 // MARK: - Actions
     @IBAction func correctBtn(_ sender: Any) {
-        roundScoreCounter(true)
+        glow(true)
+        roundScoreCounter(true, minus: rules.minusWord)
         setScoreOfTheRoundLbl()
         results[0].words.append(wordToGuess.text!)
         results[0].wordIsCorrect.append(true)
@@ -53,7 +58,8 @@ class GameVC: UIViewController {
         }
     }
     @IBAction func unCorrectBtn(_ sender: Any) {
-        roundScoreCounter(false)
+        glow(false)
+        roundScoreCounter(false, minus: rules.minusWord)
         setScoreOfTheRoundLbl()
         results[0].words.append(wordToGuess.text!)
         results[0].wordIsCorrect.append(false)
@@ -112,24 +118,58 @@ class GameVC: UIViewController {
         scoreOfTheRoundLbl.text = String(scoreOfTheRound)
     }
     
-    func roundScoreCounter(_ tf: Bool){
-        if tf {scoreOfTheRound += 1}
-        else {
-            if scoreOfTheRound == 0 {scoreOfTheRound = 0}
-            else {return}
+    func roundScoreCounter(_ tf: Bool, minus: Bool){
+        if minus == false {
+            if tf {scoreOfTheRound += 1}
+                else {
+                    if scoreOfTheRound == 0 {scoreOfTheRound = 0}
+                    else {return}
+                }
+        } else {
+            if tf {scoreOfTheRound += 1}
+                else {scoreOfTheRound -= 1}
         }
     }
+    
+// MARK: - Glow effect
+    func glow(_ bool: Bool){
+        let colorBase = #colorLiteral(red: 0.1251712918, green: 0.3118379438, blue: 0.2135035001, alpha: 0.2549976071)
+        let colorTrue = #colorLiteral(red: 0.04668927852, green: 0.810528996, blue: 0.07704036889, alpha: 0.2470848639)
+        let colorFalse = #colorLiteral(red: 0.9098187089, green: 0.3176635206, blue: 0.1137945428, alpha: 0.2493702465)
+        
+        if bool {
+            glow.backgroundColor = colorTrue
+            UIView.animate(withDuration: 0.25) {
+                self.glow.backgroundColor = colorBase
+            }
+        }
+        else {
+            glow.backgroundColor = colorFalse
+            UIView.animate(withDuration: 0.25) {
+                self.glow.backgroundColor = colorBase
+            }
+        }
+    }
+    
+
+        
 // MARK: - Timer
     func setupTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.pauseView.isHidden == false {return}
             if self.timeLeft != 0 {
-                self.timerLbl.text = "\(self.timeLeft) sec"
+                self.timerLbl.text = "\(self.timeLeft)"
                 self.timeLeft -= 1
                 if self.timeLeft == 9 {Sounds.left10Sec.play(OnOff: rules.soundInGame)}
             } else {
                 timer.invalidate()
-                self.timerLbl.text = "Time is up..."
+                self.timerLbl.text = ""
+                let image: UIImage = UIImage(named: "hourglass")!
+                var bgImage: UIImageView?
+                bgImage = UIImageView(image: image)
+                bgImage!.frame = CGRect(x: 0,y: -20,width: 40,height: 40)
+                self.timerLbl.addSubview(bgImage!)
+                
                 self.noTimeLeft = true
                 Sounds.noTimeLeft.play(OnOff: rules.soundInGame)
             }

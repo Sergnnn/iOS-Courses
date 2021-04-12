@@ -318,7 +318,6 @@
 			children = (
 				B312AAFC25D538D300987473 /* BackgroundImage.swift */,
 				B3AF98B425DFF7A300A02E00 /* CustomSwitch.swift */,
-				B316A23525D2D7A500B7D270 /* Cells */,
 				B316A23425D2D79D00B7D270 /* Labels */,
 				B316A23325D2D78200B7D270 /* Buttons */,
 			);
@@ -328,6 +327,7 @@
 		B374858325A3B972001004A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B316A23525D2D7A500B7D270 /* Cells */,
 				B3BA506E25C9EA910050CCAE /* Model.swift */,
 			);
 			path = Model;
@@ -610,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -665,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -683,6 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2XWCR3756;
 				INFOPLIST_FILE = "Alias-First-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,6 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2XWCR3756;
 				INFOPLIST_FILE = "Alias-First-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

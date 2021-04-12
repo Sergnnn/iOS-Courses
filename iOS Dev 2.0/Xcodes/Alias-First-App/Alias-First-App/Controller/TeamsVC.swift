@@ -76,8 +76,7 @@ class TeamsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //MARK: - Configuering Alert
     func configurationTextField(textField: UITextField!) {
         if (textField) != nil {
-            self.textField = textField!        //Save reference to the UITextField
-         //   self.textField?.placeholder = "Some text"
+            self.textField = textField!        
         }
     }
     

@@ -38,14 +38,15 @@ func saveGameRules(completion: (_ finished: Bool) -> ()) {
     
     
     guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
-//    let privateManagedContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-//    privateManagedContext.parent = managedContext
     
     let gameRules = GameRules(context: managedContext)
     gameRules.amountOfWordsToWin = Int32(rules.amountOfWords)
     gameRules.roundNumber = Int32(roundCounter)
     gameRules.roundTime = Int32(rules.roundTime)
     gameRules.teamNumber = Int32(teamNumber)
+    gameRules.minusWord = rules.minusWord
+    gameRules.generalWord = rules.generalWord
+    gameRules.soundInGame = rules.soundInGame
     
     do{
         try managedContext.save()
@@ -57,30 +58,9 @@ func saveGameRules(completion: (_ finished: Bool) -> ()) {
     }
 }
 
-//func saveWordsLeft(completion: (_ finished: Bool) -> ()) {
-//    guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
-////    let privateManagedContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-////    privateManagedContext.parent = managedContext
-//
-//    for word in wordsForTheGame {
-//        let wordsLeft = WordsLeft(context: managedContext)
-//        wordsLeft.word = word
-//
-//        do{
-//            try managedContext.save()
-//            debugPrint("Succesfully saved saveWordsLeft")
-//            completion(true)
-//        } catch{
-//            debugPrint("Could not save - \(error)")
-//            completion(false)
-//        }
-//    }
-//}
 
 func saveWordsLeft(completion: (_ finished: Bool) -> ()) {
     guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
-//    let privateManagedContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-//    privateManagedContext.parent = managedContext
         let wordsLeft = WordsLeft(context: managedContext)
         wordsLeft.word = wordsForTheGame
 
@@ -96,17 +76,14 @@ func saveWordsLeft(completion: (_ finished: Bool) -> ()) {
 }
     
 func saveTeams(completion: (_ finished: Bool) -> ()) {
-    guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
-//    let privateManagedContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-//    privateManagedContext.parent = managedContext
-    
-    
+    guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}   
     
     for team in teams {
-        let teamsCoreData = TeamsCoreData(context: managedContext)
-        teamsCoreData.team = team.name
-        teamsCoreData.score = Int32(team.score)
-        teamsCoreData.number = Int32(team.number)
+        let teamsCoreData = NSEntityDescription.insertNewObject(forEntityName: "TeamsCoreData", into: managedContext)
+        teamsCoreData.setValue(team.name, forKey: "team")
+        teamsCoreData.setValue(Int32(team.score), forKey: "score")
+        teamsCoreData.setValue(Int32(team.number), forKey: "number")
+    }
         
         do{
             try managedContext.save()
@@ -116,7 +93,7 @@ func saveTeams(completion: (_ finished: Bool) -> ()) {
             debugPrint("Could not save - \(error)")
             completion(false)
         }
-    }
+    
 }
 
 
@@ -139,26 +116,11 @@ func fetchGameRules(completion: (_ complete: Bool) -> ()) {
         roundCounter = Int(cgsGameRules[0].roundNumber)
         rules.roundTime = Int(cgsGameRules[0].roundTime)
         teamNumber = Int(cgsGameRules[0].teamNumber)
+        rules.soundInGame = cgsGameRules[0].soundInGame
+        rules.generalWord = cgsGameRules[0].generalWord
+        rules.minusWord = cgsGameRules[0].minusWord
     }
 }
-
-//func fetchWordsLeft(completion: (_ complete: Bool) -> ()) {
-//    guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-//
-//    let fetchRequest = NSFetchRequest<WordsLeft>(entityName: "WordsLeft")
-//
-//    do {
-//        cgsWordsLeft = try managedContext.fetch(fetchRequest)
-//        print("cgsGameRules fetched")
-//        completion(true)
-//    } catch {
-//        debugPrint("Could not fetch: \(error.localizedDescription)")
-//        completion(false)
-//    }
-//    for wordsLeft in cgsWordsLeft {
-//        wordsForTheGame.append(wordsLeft.word!)
-//    }
-//}
 
 func fetchWordsLeft(completion: (_ complete: Bool) -> ()) {
     guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
@@ -211,7 +173,7 @@ func deleteGameRules(){
     }
 
     do {
-        try managedContext.save() // <- remember to put this :)
+        try managedContext.save()
     } catch {
         print("error on delete GameRules")
     }
@@ -227,7 +189,7 @@ func deleteWordsLeft(){
     }
 
     do {
-        try managedContext.save() // <- remember to put this :)
+        try managedContext.save()
     } catch {
         print("error on delete WordsLeft")
     }
@@ -243,7 +205,7 @@ func deleteTeams(){
     }
 
     do {
-        try managedContext.save() // <- remember to put this :)
+        try managedContext.save()
     } catch {
         print("error on delete Team")
     }

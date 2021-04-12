@@ -49,7 +49,7 @@ var results = [result(team: "", score: 0, words: [], wordIsCorrect: [])]
 
 var teamNames = teamsFile
 var teams = [team]()
-var rules = rulesStructure(amountOfWords: 0, roundTime: 0, minusWord: false, generalWord: false, soundInGame: false)
+var rules = rulesStructure(amountOfWords: 0, roundTime: 0, minusWord: true, generalWord: true, soundInGame: true)
 
 
 func chooseTeamName() -> (String) {
@@ -77,9 +77,12 @@ func setTeamNumer() {
             teams[i].number = i
         }
     }
+    teamNumber = 0
 }
 
 func getWordsForTheGame() {
+    wordsForTheGame = []
+    
     for i in 0...words.count - 1 {
         if words[i].categoryIsEnable {
             wordsForTheGame.append(contentsOf: words[i].word)

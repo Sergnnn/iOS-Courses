@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "tickF.png",
+      "filename" : "TickF.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "tickF@2x.png",
+      "filename" : "TickF@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "tickF@3x.png",
+      "filename" : "TickF@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -28,7 +28,7 @@ class RulesVC: UIViewController {
         roundTimeSlider.value = 60
         roundTimeLabel.text = "\(Int(roundTimeSlider.value))"
         
-        minusWordSwitch.isOn = false
+        minusWordSwitch.isOn = true
         generalWordSwitch.isOn = true
         soundInGameSwitch.isOn = true
         

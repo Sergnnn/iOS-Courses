@@ -18,6 +18,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        deleteWordsLeft()
 
         wordsCategoryCollection.delegate = self
         wordsCategoryCollection.dataSource = self
