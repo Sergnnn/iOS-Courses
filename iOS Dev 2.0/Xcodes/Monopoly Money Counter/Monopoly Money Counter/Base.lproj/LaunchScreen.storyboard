@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +20,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.99896532299999996" green="0.66939614859999996" blue="0.46267122030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monopoly Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bll-sU-bWc">
-                                <rect key="frame" x="32" y="385.5" width="350" height="125"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bll-sU-bWc">
+                                <rect key="frame" x="50" y="385.5" width="314" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="iqA-Ed-dTZ"/>
                                     <constraint firstAttribute="height" constant="125" id="nWA-3z-26m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="45"/>
@@ -35,9 +34,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Meb-1g-iru" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BXf-51-bWZ"/>
+                            <constraint firstItem="Bll-sU-bWc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Li5-3G-At1"/>
                             <constraint firstItem="Bll-sU-bWc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Msq-yo-Wkm"/>
                             <constraint firstItem="Meb-1g-iru" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XYO-uX-Ik7"/>
                             <constraint firstAttribute="bottom" secondItem="Meb-1g-iru" secondAttribute="bottom" id="Y2P-s8-Tn1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="right" secondItem="Bll-sU-bWc" secondAttribute="right" constant="50" id="hFO-e4-0rJ"/>
                             <constraint firstItem="Bll-sU-bWc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rEv-v3-o93"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Meb-1g-iru" secondAttribute="trailing" id="vny-ch-4ev"/>
                         </constraints>
