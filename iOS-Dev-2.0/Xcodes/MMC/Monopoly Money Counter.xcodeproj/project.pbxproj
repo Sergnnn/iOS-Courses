@@ -10,6 +10,9 @@
 		3449C1BDCF0BB8CBD926360F /* Pods_Monopoly_Money_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE211FC827FB2AB36D5B77D /* Pods_Monopoly_Money_Counter.framework */; };
 		89A418C18D74C47567BF9C30 /* Pods_Monopoly_Money_CounterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5D7A336ED81F44E4D76D9B /* Pods_Monopoly_Money_CounterTests.framework */; };
 		8A7B8C32E425EEA82CADFD24 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F39045EEE2540D53880151 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework */; };
+		B31F2BC4264AA556006AD2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1525A99A10007B0925 /* Main.storyboard */; };
+		B31F2BC5264AA55A006AD2C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1A25A99A12007B0925 /* LaunchScreen.storyboard */; };
+		B31F2BC6264AA55C006AD2C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1825A99A12007B0925 /* Assets.xcassets */; };
 		B34221AD25AA6837008B1E6E /* TransferMoneyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34221AC25AA6837008B1E6E /* TransferMoneyButton.swift */; };
 		B36B6E1025A99A10007B0925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E0F25A99A10007B0925 /* AppDelegate.swift */; };
 		B36B6E1225A99A10007B0925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E1125A99A10007B0925 /* SceneDelegate.swift */; };
@@ -327,6 +330,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31F2BC4264AA556006AD2C1 /* Main.storyboard in Resources */,
+				B31F2BC6264AA55C006AD2C1 /* Assets.xcassets in Resources */,
+				B31F2BC5264AA55A006AD2C1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

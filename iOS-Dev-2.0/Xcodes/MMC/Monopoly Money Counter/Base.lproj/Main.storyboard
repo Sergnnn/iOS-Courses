@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RiG-L2-Ye1">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,69 +14,87 @@
             <objects>
                 <viewController id="RiG-L2-Ye1" customClass="MainVC" customModule="Monopoly_Money_Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qHU-HT-IPR" customClass="CustomGradient" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-6j-K3L">
-                                <rect key="frame" x="100" y="44" width="214" height="27.5"/>
+                                <rect key="frame" x="100" y="0.0" width="175" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.06058039372" green="0.14622935940000001" blue="0.45686995380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set game rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEv-Ss-T2N" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="96.5" width="414" height="27.5"/>
+                                <rect key="frame" x="0.0" y="52.5" width="375" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amounnt of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSr-7p-Nux" customClass="CustomSubLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="174" width="148.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7at-1D-LiI">
-                                <rect key="frame" x="290" y="159.5" width="94" height="59.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBf-ga-7D2">
+                                <rect key="frame" x="30" y="130" width="315" height="59.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzS-If-j7X" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amounnt of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSr-7p-Nux" customClass="CustomSubLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="59.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="2" maximumValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="g5W-ec-pwg">
-                                        <rect key="frame" x="0.0" y="27.5" width="94" height="32"/>
-                                        <connections>
-                                            <action selector="amountOfPlayersStepperChangeValue:" destination="RiG-L2-Ye1" eventType="valueChanged" id="vIk-fl-iTu"/>
-                                        </connections>
-                                    </stepper>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7at-1D-LiI">
+                                        <rect key="frame" x="221" y="0.0" width="94" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzS-If-j7X" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="2" maximumValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="g5W-ec-pwg">
+                                                <rect key="frame" x="0.0" y="27.5" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="amountOfPlayersStepperChangeValue:" destination="RiG-L2-Ye1" eventType="valueChanged" id="vIk-fl-iTu"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7at-1D-LiI" secondAttribute="trailing" id="QL4-PY-5kC"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-4Z-Sn9" customClass="CustomSubLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="294.5" width="116.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-TK-fXB">
-                                <rect key="frame" x="290" y="280" width="94" height="59.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIl-EK-qgt">
+                                <rect key="frame" x="30" y="214.5" width="315" height="59.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-G5-YoR" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-4Z-Sn9" customClass="CustomSubLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="59.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minimumValue="1000" maximumValue="10000" stepValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-y5-HJ6">
-                                        <rect key="frame" x="0.0" y="27.5" width="94" height="32"/>
-                                        <connections>
-                                            <action selector="startingMoneyStepperChangrValue:" destination="RiG-L2-Ye1" eventType="valueChanged" id="aRI-jL-ulX"/>
-                                        </connections>
-                                    </stepper>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-TK-fXB">
+                                        <rect key="frame" x="221" y="0.0" width="94" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-G5-YoR" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1000" minimumValue="1000" maximumValue="10000" stepValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-y5-HJ6">
+                                                <rect key="frame" x="0.0" y="27.5" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="startingMoneyStepperChangrValue:" destination="RiG-L2-Ye1" eventType="valueChanged" id="aRI-jL-ulX"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cv8-TK-fXB" secondAttribute="bottom" id="2QI-ac-bp9"/>
+                                    <constraint firstItem="cv8-TK-fXB" firstAttribute="top" secondItem="OIl-EK-qgt" secondAttribute="top" id="9HL-iv-6ug"/>
+                                    <constraint firstAttribute="trailing" secondItem="cv8-TK-fXB" secondAttribute="trailing" id="a4D-aH-4LQ"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cv-go-Sl0" customClass="CustomNextScreeneButton" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="762" width="354" height="50"/>
+                                <rect key="frame" x="30" y="557" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nRx-H0-ccC"/>
                                 </constraints>
@@ -86,27 +104,35 @@
                                     <segue destination="mg4-ZX-ja3" kind="presentation" modalPresentationStyle="fullScreen" id="FXe-iX-xRT"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rv-gv-Zgr" userLabel="bannerView" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AgR-Lj-YYw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2So-HT-mJk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="OEv-Ss-T2N" secondAttribute="trailing" id="0Tw-ND-M5g"/>
-                            <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="7at-1D-LiI" secondAttribute="trailing" constant="30" id="0iA-Ui-g9u"/>
                             <constraint firstItem="0cv-go-Sl0" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="30" id="4sh-ja-UyI"/>
                             <constraint firstItem="OEv-Ss-T2N" firstAttribute="top" secondItem="o9t-6j-K3L" secondAttribute="bottom" constant="25" id="6wl-na-yLx"/>
-                            <constraint firstItem="cv8-TK-fXB" firstAttribute="centerY" secondItem="gLQ-4Z-Sn9" secondAttribute="centerY" constant="5" id="CrC-mB-k8f"/>
+                            <constraint firstItem="8Rv-gv-Zgr" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" id="GkS-S8-tiQ"/>
+                            <constraint firstItem="DBf-ga-7D2" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="30" id="IKQ-5n-C84"/>
+                            <constraint firstItem="OIl-EK-qgt" firstAttribute="top" secondItem="DBf-ga-7D2" secondAttribute="bottom" constant="25" id="LL4-aU-KRX"/>
                             <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="o9t-6j-K3L" secondAttribute="trailing" constant="100" id="MOw-pG-hHr"/>
                             <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="0cv-go-Sl0" secondAttribute="trailing" constant="30" id="NNK-jg-FqG"/>
-                            <constraint firstItem="7at-1D-LiI" firstAttribute="centerY" secondItem="TSr-7p-Nux" secondAttribute="centerY" constant="5" id="QG1-dH-82u"/>
                             <constraint firstItem="o9t-6j-K3L" firstAttribute="top" secondItem="2So-HT-mJk" secondAttribute="top" id="QWK-ZR-dyw"/>
-                            <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="cv8-TK-fXB" secondAttribute="trailing" constant="30" id="SIy-b7-FyG"/>
-                            <constraint firstItem="2So-HT-mJk" firstAttribute="bottom" secondItem="0cv-go-Sl0" secondAttribute="bottom" constant="50" id="a8f-Lq-jnV"/>
+                            <constraint firstItem="OIl-EK-qgt" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="30" id="RGa-wS-MxN"/>
+                            <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="8Rv-gv-Zgr" secondAttribute="trailing" id="YnD-Jd-OV3"/>
+                            <constraint firstItem="2So-HT-mJk" firstAttribute="bottom" secondItem="0cv-go-Sl0" secondAttribute="bottom" constant="60" id="a8f-Lq-jnV"/>
                             <constraint firstItem="OEv-Ss-T2N" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" id="cN0-84-H6V"/>
-                            <constraint firstItem="TSr-7p-Nux" firstAttribute="top" secondItem="OEv-Ss-T2N" secondAttribute="bottom" constant="50" id="gvS-dO-KW3"/>
-                            <constraint firstItem="TSr-7p-Nux" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="30" id="jRd-l2-qwE"/>
+                            <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="DBf-ga-7D2" secondAttribute="trailing" constant="30" id="efr-p0-jQH"/>
+                            <constraint firstItem="DBf-ga-7D2" firstAttribute="top" secondItem="OEv-Ss-T2N" secondAttribute="bottom" constant="50" id="ev3-Mr-fzM"/>
+                            <constraint firstAttribute="bottom" secondItem="8Rv-gv-Zgr" secondAttribute="bottom" id="f85-nY-ADG"/>
                             <constraint firstItem="o9t-6j-K3L" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="100" id="qat-qH-wUg"/>
-                            <constraint firstItem="gLQ-4Z-Sn9" firstAttribute="top" secondItem="TSr-7p-Nux" secondAttribute="bottom" constant="100" id="s9p-Cn-lck"/>
-                            <constraint firstItem="gLQ-4Z-Sn9" firstAttribute="leading" secondItem="2So-HT-mJk" secondAttribute="leading" constant="30" id="zoQ-fr-Jhf"/>
+                            <constraint firstItem="2So-HT-mJk" firstAttribute="trailing" secondItem="OIl-EK-qgt" secondAttribute="trailing" constant="30" id="rdp-5g-rTI"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -121,6 +147,7 @@
                     <connections>
                         <outlet property="amountOfPlayersLabel" destination="BzS-If-j7X" id="S6O-TT-E60"/>
                         <outlet property="amountOfPlayersStepper" destination="g5W-ec-pwg" id="wIS-rW-Pgp"/>
+                        <outlet property="bannerView" destination="8Rv-gv-Zgr" id="SqI-rF-3zb"/>
                         <outlet property="startingMoneyLabel" destination="T0n-G5-YoR" id="mfy-6h-EdZ"/>
                         <outlet property="startingMoneyStepper" destination="ERL-y5-HJ6" id="1ep-SL-dtQ"/>
                     </connections>
@@ -134,26 +161,26 @@
             <objects>
                 <viewController id="mg4-ZX-ja3" customClass="NamesVC" customModule="Monopoly_Money_Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="29V-bk-tyz" customClass="CustomGradient" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K94-TH-YJF">
-                                <rect key="frame" x="100" y="44" width="214" height="27.5"/>
+                                <rect key="frame" x="100" y="0.0" width="175" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.06058039372" green="0.14622935940000001" blue="0.45686995380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Players names" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daq-ZV-FyM" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="96.5" width="414" height="27.5"/>
+                                <rect key="frame" x="0.0" y="52.5" width="375" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-JD-Jot">
-                                <rect key="frame" x="45" y="174" width="324" height="35"/>
+                                <rect key="frame" x="45" y="130" width="285" height="35"/>
                                 <subviews>
                                     <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-Cz-WQr" customClass="CustomPlayersTxtField" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="iaT-cv-uan"/>
                                         </constraints>
@@ -163,7 +190,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xp-OJ-GNO" customClass="CustomNextScreeneButton" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="762" width="354" height="50"/>
+                                <rect key="frame" x="30" y="557" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5gh-Pq-7Dm"/>
                                 </constraints>
@@ -181,7 +208,7 @@
                             <constraint firstItem="L47-g5-qWZ" firstAttribute="trailing" secondItem="NRw-JD-Jot" secondAttribute="trailing" constant="45" id="45c-Ga-LG7"/>
                             <constraint firstItem="K94-TH-YJF" firstAttribute="top" secondItem="L47-g5-qWZ" secondAttribute="top" id="64G-h9-iqU"/>
                             <constraint firstItem="NRw-JD-Jot" firstAttribute="top" secondItem="daq-ZV-FyM" secondAttribute="bottom" constant="50" id="Av9-Bz-ASX"/>
-                            <constraint firstItem="L47-g5-qWZ" firstAttribute="bottom" secondItem="5Xp-OJ-GNO" secondAttribute="bottom" constant="50" id="Ffa-ii-kUQ"/>
+                            <constraint firstItem="L47-g5-qWZ" firstAttribute="bottom" secondItem="5Xp-OJ-GNO" secondAttribute="bottom" constant="60" id="Ffa-ii-kUQ"/>
                             <constraint firstItem="daq-ZV-FyM" firstAttribute="top" secondItem="K94-TH-YJF" secondAttribute="bottom" constant="25" id="K7A-Qa-9YF"/>
                             <constraint firstItem="5Xp-OJ-GNO" firstAttribute="leading" secondItem="L47-g5-qWZ" secondAttribute="leading" constant="30" id="Lxc-0a-vks"/>
                             <constraint firstItem="L47-g5-qWZ" firstAttribute="trailing" secondItem="K94-TH-YJF" secondAttribute="trailing" constant="100" id="Ole-wb-AtL"/>
@@ -216,20 +243,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameVC" customModule="Monopoly_Money_Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CustomGradient" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQI-5w-mpX">
-                                <rect key="frame" x="100" y="44" width="214" height="27.5"/>
+                                <rect key="frame" x="100" y="0.0" width="175" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.06058039371546247" green="0.1462293593979973" blue="0.45686995381056661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qiN-BM-Kw1">
-                                <rect key="frame" x="45" y="281.5" width="324" height="27.5"/>
+                                <rect key="frame" x="45" y="237.5" width="285" height="27.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hBl-pk-LND">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="27.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wK-ji-npb" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="27.5"/>
@@ -238,7 +265,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fy-Ip-fMv" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                                <rect key="frame" x="276.5" y="0.0" width="47.5" height="27.5"/>
+                                                <rect key="frame" x="237.5" y="0.0" width="47.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -248,7 +275,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGz-eg-oAQ" customClass="CustomPlayersTxtField" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="45" y="221.5" width="324" height="35"/>
+                                <rect key="frame" x="45" y="177.5" width="285" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="0Ny-qz-dZm"/>
                                 </constraints>
@@ -256,7 +283,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqp-sG-KXM" customClass="CustomNextScreeneButton" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="762" width="354" height="50"/>
+                                <rect key="frame" x="30" y="557" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bZM-Ra-gTy"/>
                                 </constraints>
@@ -268,7 +295,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJE-hT-FLI">
-                                <rect key="frame" x="30" y="96.5" width="354" height="100"/>
+                                <rect key="frame" x="30" y="52.5" width="315" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Bfm-1u-Pjo"/>
                                 </constraints>
@@ -284,7 +311,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iqp-sG-KXM" secondAttribute="trailing" constant="30" id="ELB-df-O1J"/>
                             <constraint firstItem="Iqp-sG-KXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LDk-oY-TaW"/>
                             <constraint firstItem="sQI-5w-mpX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LHT-ph-AHR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iqp-sG-KXM" secondAttribute="bottom" constant="50" id="cll-Zt-gv9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iqp-sG-KXM" secondAttribute="bottom" constant="60" id="cll-Zt-gv9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qiN-BM-Kw1" secondAttribute="trailing" constant="45" id="dtv-Pm-JDs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJE-hT-FLI" secondAttribute="trailing" constant="30" id="igL-RF-Te9"/>
                             <constraint firstItem="jGz-eg-oAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="liO-pa-dcN"/>
@@ -320,26 +347,26 @@
             <objects>
                 <viewController id="dUt-d7-WMA" customClass="StatVC" customModule="Monopoly_Money_Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0pV-Nv-OVs" customClass="CustomGradient" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statisitcs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHz-Gv-o30" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="96.5" width="414" height="27.5"/>
+                                <rect key="frame" x="0.0" y="52.5" width="375" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMm-z2-RUi">
-                                <rect key="frame" x="100" y="44" width="214" height="27.5"/>
+                                <rect key="frame" x="100" y="0.0" width="175" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.06058039372" green="0.14622935940000001" blue="0.45686995380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="te1-ZH-1gr">
-                                <rect key="frame" x="45" y="149" width="324" height="70"/>
+                                <rect key="frame" x="45" y="105" width="285" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5EE-PE-pZs">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="27.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of transfers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5p-bf-K1K" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="27.5"/>
@@ -348,7 +375,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBg-0N-Bpo" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="24" height="27.5"/>
+                                                <rect key="frame" x="261" y="0.0" width="24" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -356,7 +383,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kYG-IG-nTO">
-                                        <rect key="frame" x="0.0" y="42.5" width="324" height="27.5"/>
+                                        <rect key="frame" x="0.0" y="42.5" width="285" height="27.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time played" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJu-wo-sG0" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="27.5"/>
@@ -365,7 +392,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoZ-GG-cJi" customClass="CustomMainLabel" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                                <rect key="frame" x="300" y="0.0" width="24" height="27.5"/>
+                                                <rect key="frame" x="261" y="0.0" width="24" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -375,7 +402,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scy-gz-18x" customClass="CustomNextScreeneButton" customModule="Monopoly_Money_Counter" customModuleProvider="target">
-                                <rect key="frame" x="30" y="762" width="354" height="50"/>
+                                <rect key="frame" x="30" y="557" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4HR-D6-3YB"/>
                                 </constraints>
@@ -389,7 +416,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="scy-gz-18x" firstAttribute="leading" secondItem="57w-xQ-yzC" secondAttribute="leading" constant="30" id="5nJ-5d-hy0"/>
-                            <constraint firstItem="57w-xQ-yzC" firstAttribute="bottom" secondItem="scy-gz-18x" secondAttribute="bottom" constant="50" id="7w7-0R-tVG"/>
+                            <constraint firstItem="57w-xQ-yzC" firstAttribute="bottom" secondItem="scy-gz-18x" secondAttribute="bottom" constant="60" id="7w7-0R-tVG"/>
                             <constraint firstItem="yHz-Gv-o30" firstAttribute="trailing" secondItem="57w-xQ-yzC" secondAttribute="trailing" id="Ime-YL-OcY"/>
                             <constraint firstItem="yHz-Gv-o30" firstAttribute="leading" secondItem="57w-xQ-yzC" secondAttribute="leading" id="LOQ-cA-309"/>
                             <constraint firstItem="QMm-z2-RUi" firstAttribute="top" secondItem="57w-xQ-yzC" secondAttribute="top" id="WMX-Tq-cP0"/>
