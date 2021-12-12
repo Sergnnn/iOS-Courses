@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
-class MainVC: UIViewController, GADBannerViewDelegate {
-    @IBOutlet weak var bannerView: GADBannerView!
+class MainVC: UIViewController {
     
     
     @IBOutlet weak var amountOfPlayersLabel: CustomMainLabel!
@@ -27,18 +25,8 @@ class MainVC: UIViewController, GADBannerViewDelegate {
         startingMoneyStepper.value = 1500
         startingMoneyLabel.text = "\(Int(startingMoneyStepper.value).description)"
         
-        bannerView.adUnitID = "ca-app-pub-1963870271091860/7878938871"
-        bannerView.rootViewController = self
-        bannerView.delegate = self
-        bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(414)
-        bannerView.load(GADRequest())
-        
           }
     
-    
-    
-
-
     
     @IBAction func amountOfPlayersStepperChangeValue(_ sender: UIStepper) {
         amountOfPlayersLabel.text = Int(sender.value).description
@@ -57,9 +45,5 @@ class MainVC: UIViewController, GADBannerViewDelegate {
         }
     }
         
-        
-    
-    
-   
 }
 

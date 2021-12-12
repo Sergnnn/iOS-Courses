@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests : NSObject
-@end
-@implementation PodsDummy_Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests
-@end

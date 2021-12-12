@@ -7,55 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3449C1BDCF0BB8CBD926360F /* Pods_Monopoly_Money_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE211FC827FB2AB36D5B77D /* Pods_Monopoly_Money_Counter.framework */; };
-		89A418C18D74C47567BF9C30 /* Pods_Monopoly_Money_CounterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5D7A336ED81F44E4D76D9B /* Pods_Monopoly_Money_CounterTests.framework */; };
-		8A7B8C32E425EEA82CADFD24 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F39045EEE2540D53880151 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework */; };
-		B31F2BC4264AA556006AD2C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1525A99A10007B0925 /* Main.storyboard */; };
-		B31F2BC5264AA55A006AD2C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1A25A99A12007B0925 /* LaunchScreen.storyboard */; };
-		B31F2BC6264AA55C006AD2C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1825A99A12007B0925 /* Assets.xcassets */; };
-		B34221AD25AA6837008B1E6E /* TransferMoneyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34221AC25AA6837008B1E6E /* TransferMoneyButton.swift */; };
-		B36B6E1025A99A10007B0925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E0F25A99A10007B0925 /* AppDelegate.swift */; };
-		B36B6E1225A99A10007B0925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E1125A99A10007B0925 /* SceneDelegate.swift */; };
-		B36B6E1425A99A10007B0925 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E1325A99A10007B0925 /* MainVC.swift */; };
-		B36B6E2725A99A12007B0925 /* Monopoly_Money_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E2625A99A12007B0925 /* Monopoly_Money_CounterTests.swift */; };
-		B36B6E3225A99A12007B0925 /* Monopoly_Money_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E3125A99A12007B0925 /* Monopoly_Money_CounterUITests.swift */; };
-		B36B6E4925A99A9C007B0925 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E4825A99A9C007B0925 /* Model.swift */; };
-		B36B6E5425A99BE1007B0925 /* CustomGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5325A99BE1007B0925 /* CustomGradient.swift */; };
-		B36B6E5925A99FAF007B0925 /* CustomMainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5825A99FAF007B0925 /* CustomMainLabel.swift */; };
-		B36B6E5E25A9A466007B0925 /* CustomSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5D25A9A466007B0925 /* CustomSubLabel.swift */; };
-		B36B6E6325A9A77A007B0925 /* NamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6225A9A77A007B0925 /* NamesVC.swift */; };
-		B36B6E6825A9A788007B0925 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6725A9A788007B0925 /* GameVC.swift */; };
-		B36B6E6D25A9A91F007B0925 /* CustomPlayersTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6C25A9A91F007B0925 /* CustomPlayersTxtField.swift */; };
-		B36B6E7225A9ADA3007B0925 /* CustomNextScreeneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E7125A9ADA3007B0925 /* CustomNextScreeneButton.swift */; };
-		B3FD959625AAFC30003CEFAA /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD959525AAFC30003CEFAA /* StatVC.swift */; };
+		9708969ADCA97752A88C320D /* Pods_Monopoly_Money_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4598297203597EF6F22DD05 /* Pods_Monopoly_Money_Counter.framework */; };
+		D52973D927660CA900384C74 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E4825A99A9C007B0925 /* Model.swift */; };
+		D52973DA27660CAD00384C74 /* CustomGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5325A99BE1007B0925 /* CustomGradient.swift */; };
+		D52973DB27660CAF00384C74 /* TransferMoneyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34221AC25AA6837008B1E6E /* TransferMoneyButton.swift */; };
+		D52973DC27660CB100384C74 /* CustomMainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5825A99FAF007B0925 /* CustomMainLabel.swift */; };
+		D52973DD27660CB400384C74 /* CustomSubLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E5D25A9A466007B0925 /* CustomSubLabel.swift */; };
+		D52973DE27660CB600384C74 /* CustomPlayersTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6C25A9A91F007B0925 /* CustomPlayersTxtField.swift */; };
+		D52973DF27660CB800384C74 /* CustomNextScreeneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E7125A9ADA3007B0925 /* CustomNextScreeneButton.swift */; };
+		D52973E027660CBB00384C74 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E1325A99A10007B0925 /* MainVC.swift */; };
+		D52973E127660CBD00384C74 /* NamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6225A9A77A007B0925 /* NamesVC.swift */; };
+		D52973E227660CC100384C74 /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD959525AAFC30003CEFAA /* StatVC.swift */; };
+		D52973E327660CC400384C74 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E6725A9A788007B0925 /* GameVC.swift */; };
+		D52973E427660CC600384C74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E0F25A99A10007B0925 /* AppDelegate.swift */; };
+		D52973E527660CC800384C74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B6E1125A99A10007B0925 /* SceneDelegate.swift */; };
+		D52973E627660CCC00384C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1525A99A10007B0925 /* Main.storyboard */; };
+		D52973E727660CD000384C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1825A99A12007B0925 /* Assets.xcassets */; };
+		D52973E827660CD200384C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36B6E1A25A99A12007B0925 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B36B6E2325A99A12007B0925 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B36B6E0425A99A10007B0925 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B36B6E0B25A99A10007B0925;
-			remoteInfo = "Monopoly Money Counter";
-		};
-		B36B6E2E25A99A12007B0925 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B36B6E0425A99A10007B0925 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B36B6E0B25A99A10007B0925;
-			remoteInfo = "Monopoly Money Counter";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1D66DD4FD490506DF2BD5D9E /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter-Monopoly Money CounterUITests.debug.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter-Monopoly Money CounterUITests/Pods-Monopoly Money Counter-Monopoly Money CounterUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		242BE19077033B757B282604 /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter-Monopoly Money CounterUITests.release.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter-Monopoly Money CounterUITests/Pods-Monopoly Money Counter-Monopoly Money CounterUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2D5D7A336ED81F44E4D76D9B /* Pods_Monopoly_Money_CounterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Monopoly_Money_CounterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F21CEA97925B1481EECF174 /* Pods-Monopoly Money Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter.debug.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter/Pods-Monopoly Money Counter.debug.xcconfig"; sourceTree = "<group>"; };
-		6DE211FC827FB2AB36D5B77D /* Pods_Monopoly_Money_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Monopoly_Money_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81D8B06313E923CB3CA584CB /* Pods-Monopoly Money CounterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money CounterTests.release.xcconfig"; path = "Target Support Files/Pods-Monopoly Money CounterTests/Pods-Monopoly Money CounterTests.release.xcconfig"; sourceTree = "<group>"; };
-		931234B0BCADE185D5EBE406 /* Pods-Monopoly Money Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter.release.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter/Pods-Monopoly Money Counter.release.xcconfig"; sourceTree = "<group>"; };
-		A8DF538E7DA09717EF110BC2 /* Pods-Monopoly Money CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money CounterTests.debug.xcconfig"; path = "Target Support Files/Pods-Monopoly Money CounterTests/Pods-Monopoly Money CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		822ADFE788880FD402B51C48 /* Pods-Monopoly Money Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter.release.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter/Pods-Monopoly Money Counter.release.xcconfig"; sourceTree = "<group>"; };
 		B34221AC25AA6837008B1E6E /* TransferMoneyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMoneyButton.swift; sourceTree = "<group>"; };
 		B36B6E0C25A99A10007B0925 /* Monopoly Money Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monopoly Money Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36B6E0F25A99A10007B0925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,12 +37,6 @@
 		B36B6E1825A99A12007B0925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B36B6E1B25A99A12007B0925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B36B6E1D25A99A12007B0925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36B6E2225A99A12007B0925 /* Monopoly Money CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monopoly Money CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B36B6E2625A99A12007B0925 /* Monopoly_Money_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_Money_CounterTests.swift; sourceTree = "<group>"; };
-		B36B6E2825A99A12007B0925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36B6E2D25A99A12007B0925 /* Monopoly Money CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monopoly Money CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B36B6E3125A99A12007B0925 /* Monopoly_Money_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monopoly_Money_CounterUITests.swift; sourceTree = "<group>"; };
-		B36B6E3325A99A12007B0925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36B6E4825A99A9C007B0925 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B36B6E5325A99BE1007B0925 /* CustomGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradient.swift; sourceTree = "<group>"; };
 		B36B6E5825A99FAF007B0925 /* CustomMainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainLabel.swift; sourceTree = "<group>"; };
@@ -80,7 +46,8 @@
 		B36B6E6C25A9A91F007B0925 /* CustomPlayersTxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayersTxtField.swift; sourceTree = "<group>"; };
 		B36B6E7125A9ADA3007B0925 /* CustomNextScreeneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNextScreeneButton.swift; sourceTree = "<group>"; };
 		B3FD959525AAFC30003CEFAA /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
-		F0F39045EEE2540D53880151 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D862747C49CD1C2483FEC1 /* Pods-Monopoly Money Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monopoly Money Counter.debug.xcconfig"; path = "Target Support Files/Pods-Monopoly Money Counter/Pods-Monopoly Money Counter.debug.xcconfig"; sourceTree = "<group>"; };
+		E4598297203597EF6F22DD05 /* Pods_Monopoly_Money_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Monopoly_Money_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,51 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3449C1BDCF0BB8CBD926360F /* Pods_Monopoly_Money_Counter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E1F25A99A12007B0925 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89A418C18D74C47567BF9C30 /* Pods_Monopoly_Money_CounterTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E2A25A99A12007B0925 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A7B8C32E425EEA82CADFD24 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework in Frameworks */,
+				9708969ADCA97752A88C320D /* Pods_Monopoly_Money_Counter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20E58057CB76B826EDBECD5B /* Pods */ = {
+		0F082B9717B279DC9F32A1E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5F21CEA97925B1481EECF174 /* Pods-Monopoly Money Counter.debug.xcconfig */,
-				931234B0BCADE185D5EBE406 /* Pods-Monopoly Money Counter.release.xcconfig */,
-				1D66DD4FD490506DF2BD5D9E /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.debug.xcconfig */,
-				242BE19077033B757B282604 /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.release.xcconfig */,
-				A8DF538E7DA09717EF110BC2 /* Pods-Monopoly Money CounterTests.debug.xcconfig */,
-				81D8B06313E923CB3CA584CB /* Pods-Monopoly Money CounterTests.release.xcconfig */,
+				D0D862747C49CD1C2483FEC1 /* Pods-Monopoly Money Counter.debug.xcconfig */,
+				822ADFE788880FD402B51C48 /* Pods-Monopoly Money Counter.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		37D900B37CB1FB6C8A4A23CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4598297203597EF6F22DD05 /* Pods_Monopoly_Money_Counter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B36B6E0325A99A10007B0925 = {
 			isa = PBXGroup;
 			children = (
 				B36B6E0E25A99A10007B0925 /* Monopoly Money Counter */,
-				B36B6E2525A99A12007B0925 /* Monopoly Money CounterTests */,
-				B36B6E3025A99A12007B0925 /* Monopoly Money CounterUITests */,
 				B36B6E0D25A99A10007B0925 /* Products */,
-				20E58057CB76B826EDBECD5B /* Pods */,
-				C1C9D36941003373F302E240 /* Frameworks */,
+				0F082B9717B279DC9F32A1E8 /* Pods */,
+				37D900B37CB1FB6C8A4A23CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				B36B6E0C25A99A10007B0925 /* Monopoly Money Counter.app */,
-				B36B6E2225A99A12007B0925 /* Monopoly Money CounterTests.xctest */,
-				B36B6E2D25A99A12007B0925 /* Monopoly Money CounterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,24 +111,6 @@
 				B36B6E1D25A99A12007B0925 /* Info.plist */,
 			);
 			path = "Monopoly Money Counter";
-			sourceTree = "<group>";
-		};
-		B36B6E2525A99A12007B0925 /* Monopoly Money CounterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B36B6E2625A99A12007B0925 /* Monopoly_Money_CounterTests.swift */,
-				B36B6E2825A99A12007B0925 /* Info.plist */,
-			);
-			path = "Monopoly Money CounterTests";
-			sourceTree = "<group>";
-		};
-		B36B6E3025A99A12007B0925 /* Monopoly Money CounterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B36B6E3125A99A12007B0925 /* Monopoly_Money_CounterUITests.swift */,
-				B36B6E3325A99A12007B0925 /* Info.plist */,
-			);
-			path = "Monopoly Money CounterUITests";
 			sourceTree = "<group>";
 		};
 		B36B6E4525A99A7E007B0925 /* Controller */ = {
@@ -212,16 +145,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C1C9D36941003373F302E240 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6DE211FC827FB2AB36D5B77D /* Pods_Monopoly_Money_Counter.framework */,
-				F0F39045EEE2540D53880151 /* Pods_Monopoly_Money_Counter_Monopoly_Money_CounterUITests.framework */,
-				2D5D7A336ED81F44E4D76D9B /* Pods_Monopoly_Money_CounterTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,11 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B36B6E3625A99A12007B0925 /* Build configuration list for PBXNativeTarget "Monopoly Money Counter" */;
 			buildPhases = (
-				9C5A9B660E9AD2038C9D1171 /* [CP] Check Pods Manifest.lock */,
+				12F3A8F7973164C606BEAFDC /* [CP] Check Pods Manifest.lock */,
 				B36B6E0825A99A10007B0925 /* Sources */,
 				B36B6E0925A99A10007B0925 /* Frameworks */,
 				B36B6E0A25A99A10007B0925 /* Resources */,
-				DB65493101A155EFF86AF950 /* [CP] Embed Pods Frameworks */,
+				9EB76C328B526C55078BFFF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,45 +166,6 @@
 			productName = "Monopoly Money Counter";
 			productReference = B36B6E0C25A99A10007B0925 /* Monopoly Money Counter.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B36B6E2125A99A12007B0925 /* Monopoly Money CounterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B36B6E3925A99A12007B0925 /* Build configuration list for PBXNativeTarget "Monopoly Money CounterTests" */;
-			buildPhases = (
-				77837A6177A561FF8213C508 /* [CP] Check Pods Manifest.lock */,
-				B36B6E1E25A99A12007B0925 /* Sources */,
-				B36B6E1F25A99A12007B0925 /* Frameworks */,
-				B36B6E2025A99A12007B0925 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B36B6E2425A99A12007B0925 /* PBXTargetDependency */,
-			);
-			name = "Monopoly Money CounterTests";
-			productName = "Monopoly Money CounterTests";
-			productReference = B36B6E2225A99A12007B0925 /* Monopoly Money CounterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B36B6E2C25A99A12007B0925 /* Monopoly Money CounterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B36B6E3C25A99A12007B0925 /* Build configuration list for PBXNativeTarget "Monopoly Money CounterUITests" */;
-			buildPhases = (
-				AE7F009345BF5BCA4EDA4054 /* [CP] Check Pods Manifest.lock */,
-				B36B6E2925A99A12007B0925 /* Sources */,
-				B36B6E2A25A99A12007B0925 /* Frameworks */,
-				B36B6E2B25A99A12007B0925 /* Resources */,
-				23437EA5B0E316CC28ABCA4A /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B36B6E2F25A99A12007B0925 /* PBXTargetDependency */,
-			);
-			name = "Monopoly Money CounterUITests";
-			productName = "Monopoly Money CounterUITests";
-			productReference = B36B6E2D25A99A12007B0925 /* Monopoly Money CounterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -294,14 +178,6 @@
 				TargetAttributes = {
 					B36B6E0B25A99A10007B0925 = {
 						CreatedOnToolsVersion = 12.2;
-					};
-					B36B6E2125A99A12007B0925 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = B36B6E0B25A99A10007B0925;
-					};
-					B36B6E2C25A99A12007B0925 = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = B36B6E0B25A99A10007B0925;
 					};
 				};
 			};
@@ -319,8 +195,6 @@
 			projectRoot = "";
 			targets = (
 				B36B6E0B25A99A10007B0925 /* Monopoly Money Counter */,
-				B36B6E2125A99A12007B0925 /* Monopoly Money CounterTests */,
-				B36B6E2C25A99A12007B0925 /* Monopoly Money CounterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,69 +204,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31F2BC4264AA556006AD2C1 /* Main.storyboard in Resources */,
-				B31F2BC6264AA55C006AD2C1 /* Assets.xcassets in Resources */,
-				B31F2BC5264AA55A006AD2C1 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E2025A99A12007B0925 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E2B25A99A12007B0925 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D52973E827660CD200384C74 /* LaunchScreen.storyboard in Resources */,
+				D52973E727660CD000384C74 /* Assets.xcassets in Resources */,
+				D52973E627660CCC00384C74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23437EA5B0E316CC28ABCA4A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Monopoly Money Counter-Monopoly Money CounterUITests/Pods-Monopoly Money Counter-Monopoly Money CounterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Monopoly Money Counter-Monopoly Money CounterUITests/Pods-Monopoly Money Counter-Monopoly Money CounterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Monopoly Money Counter-Monopoly Money CounterUITests/Pods-Monopoly Money Counter-Monopoly Money CounterUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77837A6177A561FF8213C508 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Monopoly Money CounterTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C5A9B660E9AD2038C9D1171 /* [CP] Check Pods Manifest.lock */ = {
+		12F3A8F7973164C606BEAFDC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,29 +235,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE7F009345BF5BCA4EDA4054 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Monopoly Money Counter-Monopoly Money CounterUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB65493101A155EFF86AF950 /* [CP] Embed Pods Frameworks */ = {
+		9EB76C328B526C55078BFFF9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,52 +259,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36B6E5925A99FAF007B0925 /* CustomMainLabel.swift in Sources */,
-				B36B6E5425A99BE1007B0925 /* CustomGradient.swift in Sources */,
-				B36B6E1425A99A10007B0925 /* MainVC.swift in Sources */,
-				B36B6E5E25A9A466007B0925 /* CustomSubLabel.swift in Sources */,
-				B34221AD25AA6837008B1E6E /* TransferMoneyButton.swift in Sources */,
-				B36B6E7225A9ADA3007B0925 /* CustomNextScreeneButton.swift in Sources */,
-				B3FD959625AAFC30003CEFAA /* StatVC.swift in Sources */,
-				B36B6E1025A99A10007B0925 /* AppDelegate.swift in Sources */,
-				B36B6E6325A9A77A007B0925 /* NamesVC.swift in Sources */,
-				B36B6E1225A99A10007B0925 /* SceneDelegate.swift in Sources */,
-				B36B6E6D25A9A91F007B0925 /* CustomPlayersTxtField.swift in Sources */,
-				B36B6E6825A9A788007B0925 /* GameVC.swift in Sources */,
-				B36B6E4925A99A9C007B0925 /* Model.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E1E25A99A12007B0925 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B36B6E2725A99A12007B0925 /* Monopoly_Money_CounterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B36B6E2925A99A12007B0925 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B36B6E3225A99A12007B0925 /* Monopoly_Money_CounterUITests.swift in Sources */,
+				D52973E427660CC600384C74 /* AppDelegate.swift in Sources */,
+				D52973E327660CC400384C74 /* GameVC.swift in Sources */,
+				D52973DD27660CB400384C74 /* CustomSubLabel.swift in Sources */,
+				D52973DC27660CB100384C74 /* CustomMainLabel.swift in Sources */,
+				D52973DF27660CB800384C74 /* CustomNextScreeneButton.swift in Sources */,
+				D52973DB27660CAF00384C74 /* TransferMoneyButton.swift in Sources */,
+				D52973DA27660CAD00384C74 /* CustomGradient.swift in Sources */,
+				D52973E127660CBD00384C74 /* NamesVC.swift in Sources */,
+				D52973E527660CC800384C74 /* SceneDelegate.swift in Sources */,
+				D52973E027660CBB00384C74 /* MainVC.swift in Sources */,
+				D52973D927660CA900384C74 /* Model.swift in Sources */,
+				D52973E227660CC100384C74 /* StatVC.swift in Sources */,
+				D52973DE27660CB600384C74 /* CustomPlayersTxtField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B36B6E2425A99A12007B0925 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B36B6E0B25A99A10007B0925 /* Monopoly Money Counter */;
-			targetProxy = B36B6E2325A99A12007B0925 /* PBXContainerItemProxy */;
-		};
-		B36B6E2F25A99A12007B0925 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B36B6E0B25A99A10007B0925 /* Monopoly Money Counter */;
-			targetProxy = B36B6E2E25A99A12007B0925 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B36B6E1525A99A10007B0925 /* Main.storyboard */ = {
@@ -564,6 +334,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -578,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -633,9 +404,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -645,22 +417,27 @@
 		};
 		B36B6E3725A99A12007B0925 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F21CEA97925B1481EECF174 /* Pods-Monopoly Money Counter.debug.xcconfig */;
+			baseConfigurationReference = D0D862747C49CD1C2483FEC1 /* Pods-Monopoly Money Counter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = K2XWCR3756;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Monopoly Money Counter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -668,112 +445,28 @@
 		};
 		B36B6E3825A99A12007B0925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 931234B0BCADE185D5EBE406 /* Pods-Monopoly Money Counter.release.xcconfig */;
+			baseConfigurationReference = 822ADFE788880FD402B51C48 /* Pods-Monopoly Money Counter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = K2XWCR3756;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Monopoly Money Counter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-Counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		B36B6E3A25A99A12007B0925 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8DF538E7DA09717EF110BC2 /* Pods-Monopoly Money CounterTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2XWCR3756;
-				INFOPLIST_FILE = "Monopoly Money CounterTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-CounterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly Money Counter.app/Monopoly Money Counter";
-			};
-			name = Debug;
-		};
-		B36B6E3B25A99A12007B0925 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81D8B06313E923CB3CA584CB /* Pods-Monopoly Money CounterTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2XWCR3756;
-				INFOPLIST_FILE = "Monopoly Money CounterTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-CounterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly Money Counter.app/Monopoly Money Counter";
-			};
-			name = Release;
-		};
-		B36B6E3D25A99A12007B0925 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D66DD4FD490506DF2BD5D9E /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2XWCR3756;
-				INFOPLIST_FILE = "Monopoly Money CounterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Monopoly Money Counter";
-			};
-			name = Debug;
-		};
-		B36B6E3E25A99A12007B0925 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 242BE19077033B757B282604 /* Pods-Monopoly Money Counter-Monopoly Money CounterUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K2XWCR3756;
-				INFOPLIST_FILE = "Monopoly Money CounterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNStudio.Monopoly-Money-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Monopoly Money Counter";
 			};
 			name = Release;
 		};
@@ -794,24 +487,6 @@
 			buildConfigurations = (
 				B36B6E3725A99A12007B0925 /* Debug */,
 				B36B6E3825A99A12007B0925 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B36B6E3925A99A12007B0925 /* Build configuration list for PBXNativeTarget "Monopoly Money CounterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B36B6E3A25A99A12007B0925 /* Debug */,
-				B36B6E3B25A99A12007B0925 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B36B6E3C25A99A12007B0925 /* Build configuration list for PBXNativeTarget "Monopoly Money CounterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B36B6E3D25A99A12007B0925 /* Debug */,
-				B36B6E3E25A99A12007B0925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
