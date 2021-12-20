@@ -24,6 +24,9 @@
 		D5B14D41276634DB009C22DE /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B14D40276634DB009C22DE /* NameVC.swift */; };
 		D5B14D43276634E7009C22DE /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B14D42276634E7009C22DE /* GameVC.swift */; };
 		D5B14D45276634F1009C22DE /* StatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B14D44276634F1009C22DE /* StatVC.swift */; };
+		D5BB71492768FE5F00AC3DB9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BB71482768FE5F00AC3DB9 /* AdSupport.framework */; };
+		D5BB714B2768FE6A00AC3DB9 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BB714A2768FE6A00AC3DB9 /* AppTrackingTransparency.framework */; };
+		D5BB714D276A1F2D00AC3DB9 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB714C276A1F2D00AC3DB9 /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		D5B14D40276634DB009C22DE /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		D5B14D42276634E7009C22DE /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		D5B14D44276634F1009C22DE /* StatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatVC.swift; sourceTree = "<group>"; };
+		D5BB71482768FE5F00AC3DB9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		D5BB714A2768FE6A00AC3DB9 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		D5BB714C276A1F2D00AC3DB9 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BB714B2768FE6A00AC3DB9 /* AppTrackingTransparency.framework in Frameworks */,
+				D5BB71492768FE5F00AC3DB9 /* AdSupport.framework in Frameworks */,
 				2C8F4026D6410993F73ADF5C /* Pods_MMCv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +73,8 @@
 		68ED872BB70812AC06BC6B78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5BB714A2768FE6A00AC3DB9 /* AppTrackingTransparency.framework */,
+				D5BB71482768FE5F00AC3DB9 /* AdSupport.framework */,
 				120785F352D4FBC694796F4F /* Pods_MMCv2.framework */,
 			);
 			name = Frameworks;
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B14D2E27663336009C22DE /* Model.swift */,
+				D5BB714C276A1F2D00AC3DB9 /* NotificationHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 				D5B14D172766329A009C22DE /* AppDelegate.swift in Sources */,
 				D5B14D332766338B009C22DE /* TransferMoneyButton.swift in Sources */,
 				D5B14D35276633CC009C22DE /* CustomMainLabel.swift in Sources */,
+				D5BB714D276A1F2D00AC3DB9 /* NotificationHandler.swift in Sources */,
 				D5B14D37276633F4009C22DE /* CustomSubLabel.swift in Sources */,
 				D5B14D41276634DB009C22DE /* NameVC.swift in Sources */,
 				D5B14D192766329A009C22DE /* SceneDelegate.swift in Sources */,
@@ -421,12 +433,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = K2XWCR3756;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MMCv2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Banker;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -442,7 +455,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,12 +466,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = K2XWCR3756;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MMCv2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Banker;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -474,7 +488,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

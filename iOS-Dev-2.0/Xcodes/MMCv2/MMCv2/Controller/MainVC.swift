@@ -7,8 +7,12 @@
 
 import GoogleMobileAds
 import UIKit
+import AppTrackingTransparency
+import AdSupport
+import UserNotifications
 
 class MainVC: UIViewController, GADBannerViewDelegate {
+    
     
     @IBOutlet var bannerView: GADBannerView!
     
@@ -21,7 +25,9 @@ class MainVC: UIViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = "ca-app-pub-1963870271091860/7878938871" //Change for Release
+        setNotification()
+        
+        bannerView.adUnitID = "ca-app-pub-1963870271091860/7878938871"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
@@ -60,7 +66,25 @@ class MainVC: UIViewController, GADBannerViewDelegate {
       bannerView.translatesAutoresizingMaskIntoConstraints = false
       view.addSubview(bannerView)
     }
-        
+    
+    func setNotification(){
+       //Ask for notification permission
+       let n = NotificationHandler()
+       n.askNotificationPermission {
+           //n.scheduleAllNotifications()
+           
+           //IMPORTANT: wait for 1 second to display another alert
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+               if #available(iOS 14, *) {
+                 ATTrackingManager.requestTrackingAuthorization { (status) in
+                   //print("IDFA STATUS: \(status.rawValue)")
+                   //FBAdSettings.setAdvertiserTrackingEnabled(true)
+                 }
+               }
+           }
+       }
+   }
+
 }
 
 

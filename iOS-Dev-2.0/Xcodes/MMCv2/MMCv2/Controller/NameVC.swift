@@ -5,10 +5,12 @@
 //  Created by Serg Nepomyaschyy on 12.12.2021.
 //
 
+import GoogleMobileAds
 import UIKit
 
-class NamesVC: UIViewController, UITextFieldDelegate {
+class NamesVC: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
 
+    @IBOutlet var bannerView: GADBannerView!
     
     @IBOutlet weak var stack: UIStackView!
     @IBOutlet weak var firstTxtField: CustomPlayersTxtField!
@@ -17,7 +19,14 @@ class NamesVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        bannerView.adUnitID = "ca-app-pub-1963870271091860/1551161956"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.delegate = self
+        
         firstTxtField.placeholder = "Player 1"
         self.firstTxtField.delegate = self
         firstTxtField.customizeView()
@@ -25,6 +34,8 @@ class NamesVC: UIViewController, UITextFieldDelegate {
         print("amount of element in array: \(amountOfP)")
         for i in 2...amountOfP {
             createTxtField("Player \(i)")
+            
+            
         }
     }
     
@@ -67,6 +78,10 @@ class NamesVC: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+    }
     
 }
 

@@ -23,6 +23,8 @@
 	</dict>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-1963870271091860~6748837683</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Please allow so we can show you personlizaed ads</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

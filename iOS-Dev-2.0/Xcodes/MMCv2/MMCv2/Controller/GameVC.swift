@@ -5,12 +5,12 @@
 //  Created by Serg Nepomyaschyy on 12.12.2021.
 //
 
-
+import GoogleMobileAds
 import UIKit
 
-class GameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class GameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GADBannerViewDelegate  {
 
- 
+    @IBOutlet var bannerView: GADBannerView!
     
     @IBOutlet weak var Player1Label: CustomMainLabel!
     @IBOutlet weak var Player1Money: CustomMainLabel!
@@ -27,6 +27,14 @@ class GameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 //-------------------------------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView.adUnitID = "ca-app-pub-1963870271091860/3985753607"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.delegate = self
+    
         
         setTimeStart()
         
@@ -113,6 +121,11 @@ class GameVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
         let stackH = UIStackView(arrangedSubviews: [nameLabel, valueLabel])
         
        stack.addArrangedSubview(stackH)
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
     }
 
     

@@ -14,6 +14,9 @@
 		D52973FE2766256500384C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52973FC2766256500384C74 /* Main.storyboard */; };
 		D52974002766256600384C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D52973FF2766256600384C74 /* Assets.xcassets */; };
 		D52974032766256600384C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52974012766256600384C74 /* LaunchScreen.storyboard */; };
+		D5FEF51E2768BF6600E7BDEF /* ATT alert source code.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEF51D2768BF6600E7BDEF /* ATT alert source code.swift */; };
+		D5FEF5222768E58100E7BDEF /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FEF5212768E58100E7BDEF /* AppTrackingTransparency.framework */; };
+		D5FEF5242768E5DD00E7BDEF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FEF5232768E5DD00E7BDEF /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D52973FF2766256600384C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D52974022766256600384C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D52974042766256600384C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5FEF51D2768BF6600E7BDEF /* ATT alert source code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATT alert source code.swift"; sourceTree = "<group>"; };
+		D5FEF5212768E58100E7BDEF /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		D5FEF5232768E5DD00E7BDEF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		DAC6DD20D2332444501FB8AE /* Pods_Google_Ads_Test_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Ads_Test_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFFF53DE99FA055ECA8FA60 /* Pods-Google_Ads_Test_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google_Ads_Test_App.release.xcconfig"; path = "Target Support Files/Pods-Google_Ads_Test_App/Pods-Google_Ads_Test_App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FEF5242768E5DD00E7BDEF /* AdSupport.framework in Frameworks */,
+				D5FEF5222768E58100E7BDEF /* AppTrackingTransparency.framework in Frameworks */,
 				9D55B3EBE118AA361736878C /* Pods_Google_Ads_Test_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +53,8 @@
 		8AD0EA7EC22A1BDEBAEE945D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5FEF5232768E5DD00E7BDEF /* AdSupport.framework */,
+				D5FEF5212768E58100E7BDEF /* AppTrackingTransparency.framework */,
 				DAC6DD20D2332444501FB8AE /* Pods_Google_Ads_Test_App.framework */,
 			);
 			name = Frameworks;
@@ -72,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D52973F62766256500384C74 /* AppDelegate.swift */,
+				D5FEF51D2768BF6600E7BDEF /* ATT alert source code.swift */,
 				D52973F82766256500384C74 /* SceneDelegate.swift */,
 				D52973FA2766256500384C74 /* ViewController.swift */,
 				D52973FC2766256500384C74 /* Main.storyboard */,
@@ -88,7 +99,6 @@
 				67FD5F9FB3EA9B1A2F49A4DC /* Pods-Google_Ads_Test_App.debug.xcconfig */,
 				EFFFF53DE99FA055ECA8FA60 /* Pods-Google_Ads_Test_App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +220,7 @@
 				D52973FB2766256500384C74 /* ViewController.swift in Sources */,
 				D52973F72766256500384C74 /* AppDelegate.swift in Sources */,
 				D52973F92766256500384C74 /* SceneDelegate.swift in Sources */,
+				D5FEF51E2768BF6600E7BDEF /* ATT alert source code.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -89,7 +89,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-Mg-got" customClass="CustomNextScreeneButton" customModule="MMCv2" customModuleProvider="target">
-                                <rect key="frame" x="30" y="766" width="354" height="50"/>
+                                <rect key="frame" x="30" y="756" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MxN-U8-ZSL"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="c9a-Mg-aZh"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="kIs-Mg-got" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6Qv-Nb-Wrp"/>
                             <constraint firstItem="lKO-V3-6lP" firstAttribute="top" secondItem="9eP-sc-Nfw" secondAttribute="bottom" constant="30" id="AwJ-iZ-syK"/>
                             <constraint firstItem="lKO-V3-6lP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CrJ-vt-D2j"/>
-                            <constraint firstItem="jKb-Wb-ECR" firstAttribute="top" secondItem="kIs-Mg-got" secondAttribute="bottom" constant="20" id="M02-jC-ae5"/>
+                            <constraint firstItem="jKb-Wb-ECR" firstAttribute="top" secondItem="kIs-Mg-got" secondAttribute="bottom" constant="30" id="M02-jC-ae5"/>
                             <constraint firstItem="Wyd-H0-tBF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NTb-dR-xB4"/>
                             <constraint firstItem="jKb-Wb-ECR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RhB-bj-9Kz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIs-Mg-got" secondAttribute="trailing" constant="30" id="Uin-BL-skS"/>
@@ -172,19 +172,19 @@
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-5q-EHb">
-                                <rect key="frame" x="45" y="281.5" width="324" height="31.5"/>
+                                <rect key="frame" x="45" y="281.5" width="324" height="20.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Gl-gy-w1F">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbq-ej-sMp" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePM-Mx-9TU" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="286" y="0.0" width="38" height="31.5"/>
+                                                <rect key="frame" x="286" y="0.0" width="38" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -202,7 +202,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlP-vb-Hax" customClass="CustomNextScreeneButton" customModule="MMCv2" customModuleProvider="target">
-                                <rect key="frame" x="30" y="752" width="354" height="50"/>
+                                <rect key="frame" x="30" y="756" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="p2t-8i-NiL"/>
                                 </constraints>
@@ -217,6 +217,14 @@
                                     <constraint firstAttribute="height" constant="100" id="QAX-gM-Q9v"/>
                                 </constraints>
                             </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-lY-TBj" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WQ0-nY-eku"/>
+                                    <constraint firstAttribute="height" constant="60" id="f9O-Mk-YsT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="67q-WK-CUz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -224,7 +232,9 @@
                             <constraint firstItem="1IU-5q-EHb" firstAttribute="leading" secondItem="67q-WK-CUz" secondAttribute="leading" constant="45" id="7cD-Ge-Nc6"/>
                             <constraint firstItem="67q-WK-CUz" firstAttribute="trailing" secondItem="1IU-5q-EHb" secondAttribute="trailing" constant="45" id="Ivb-Uz-iQV"/>
                             <constraint firstItem="Rqm-j8-o7w" firstAttribute="leading" secondItem="67q-WK-CUz" secondAttribute="leading" constant="30" id="JlR-NE-kpT"/>
-                            <constraint firstItem="67q-WK-CUz" firstAttribute="bottom" secondItem="GlP-vb-Hax" secondAttribute="bottom" constant="60" id="TRT-A6-jNW"/>
+                            <constraint firstItem="z9U-lY-TBj" firstAttribute="leading" secondItem="67q-WK-CUz" secondAttribute="leading" id="Muu-5p-IKu"/>
+                            <constraint firstItem="z9U-lY-TBj" firstAttribute="trailing" secondItem="67q-WK-CUz" secondAttribute="trailing" id="P1L-Wh-Y6L"/>
+                            <constraint firstItem="z9U-lY-TBj" firstAttribute="top" secondItem="GlP-vb-Hax" secondAttribute="bottom" constant="30" id="TRT-A6-jNW"/>
                             <constraint firstItem="67q-WK-CUz" firstAttribute="trailing" secondItem="Rqm-j8-o7w" secondAttribute="trailing" constant="30" id="WiW-PY-LwB"/>
                             <constraint firstItem="BrY-8R-sJH" firstAttribute="leading" secondItem="67q-WK-CUz" secondAttribute="leading" constant="100" id="bk6-VT-PwL"/>
                             <constraint firstItem="BrY-8R-sJH" firstAttribute="top" secondItem="67q-WK-CUz" secondAttribute="top" id="d1C-cZ-1N1"/>
@@ -236,6 +246,7 @@
                             <constraint firstItem="kLk-Xr-rLo" firstAttribute="top" secondItem="Rqm-j8-o7w" secondAttribute="bottom" constant="25" id="rDM-e6-OHu"/>
                             <constraint firstItem="Rqm-j8-o7w" firstAttribute="top" secondItem="BrY-8R-sJH" secondAttribute="bottom" constant="25" id="tQo-Vy-4Kh"/>
                             <constraint firstItem="67q-WK-CUz" firstAttribute="trailing" secondItem="kLk-Xr-rLo" secondAttribute="trailing" constant="45" id="w0D-la-g3C"/>
+                            <constraint firstAttribute="bottom" secondItem="z9U-lY-TBj" secondAttribute="bottom" id="xYf-9J-KJc"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -251,6 +262,7 @@
                     <connections>
                         <outlet property="Player1Label" destination="Kbq-ej-sMp" id="a7c-ah-ARb"/>
                         <outlet property="Player1Money" destination="ePM-Mx-9TU" id="uWq-GK-QOa"/>
+                        <outlet property="bannerView" destination="z9U-lY-TBj" id="BDG-Ir-nEf"/>
                         <outlet property="picker" destination="Rqm-j8-o7w" id="9DF-A2-1h7"/>
                         <outlet property="stack" destination="1IU-5q-EHb" id="lv2-LI-4sj"/>
                         <outlet property="valueTextField" destination="kLk-Xr-rLo" id="Uc6-g5-dT7"/>
@@ -294,7 +306,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-zM-xgp" customClass="CustomNextScreeneButton" customModule="MMCv2" customModuleProvider="target">
-                                <rect key="frame" x="30" y="752" width="354" height="50"/>
+                                <rect key="frame" x="30" y="756" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="R0J-Yz-iqO"/>
                                 </constraints>
@@ -305,6 +317,14 @@
                                     <segue destination="Hp3-Xe-kse" kind="presentation" modalPresentationStyle="fullScreen" id="LpC-TR-vbg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pep-2e-3lk" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="3Sl-to-Dso"/>
+                                    <constraint firstAttribute="height" constant="60" id="xzF-5p-q0z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b0l-z5-y9V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -312,13 +332,16 @@
                             <constraint firstItem="b0l-z5-y9V" firstAttribute="trailing" secondItem="vW9-zM-xgp" secondAttribute="trailing" constant="30" id="3JT-0j-UDm"/>
                             <constraint firstItem="ylM-1D-9rt" firstAttribute="top" secondItem="b0l-z5-y9V" secondAttribute="top" id="Ekl-Ib-kdr"/>
                             <constraint firstItem="b0l-z5-y9V" firstAttribute="trailing" secondItem="aGL-5L-0OV" secondAttribute="trailing" constant="45" id="Fe5-Ur-68n"/>
+                            <constraint firstItem="pep-2e-3lk" firstAttribute="leading" secondItem="b0l-z5-y9V" secondAttribute="leading" id="KR4-SU-HZz"/>
                             <constraint firstItem="vW9-zM-xgp" firstAttribute="leading" secondItem="b0l-z5-y9V" secondAttribute="leading" constant="30" id="Kq5-vz-xTG"/>
                             <constraint firstItem="aGL-5L-0OV" firstAttribute="leading" secondItem="b0l-z5-y9V" secondAttribute="leading" constant="45" id="MHm-IQ-tx3"/>
                             <constraint firstItem="jdd-qC-UxM" firstAttribute="leading" secondItem="b0l-z5-y9V" secondAttribute="leading" id="cXq-fu-QIV"/>
-                            <constraint firstItem="b0l-z5-y9V" firstAttribute="bottom" secondItem="vW9-zM-xgp" secondAttribute="bottom" constant="60" id="cfk-58-8il"/>
+                            <constraint firstItem="pep-2e-3lk" firstAttribute="top" secondItem="vW9-zM-xgp" secondAttribute="bottom" constant="30" id="cfk-58-8il"/>
                             <constraint firstItem="jdd-qC-UxM" firstAttribute="trailing" secondItem="b0l-z5-y9V" secondAttribute="trailing" id="dhM-O4-RsP"/>
                             <constraint firstItem="b0l-z5-y9V" firstAttribute="trailing" secondItem="ylM-1D-9rt" secondAttribute="trailing" constant="100" id="gDF-rz-IgL"/>
+                            <constraint firstItem="pep-2e-3lk" firstAttribute="trailing" secondItem="b0l-z5-y9V" secondAttribute="trailing" id="lAt-Q9-Lnt"/>
                             <constraint firstItem="aGL-5L-0OV" firstAttribute="top" secondItem="jdd-qC-UxM" secondAttribute="bottom" constant="50" id="nsa-Sp-phK"/>
+                            <constraint firstAttribute="bottom" secondItem="pep-2e-3lk" secondAttribute="bottom" id="q6s-f2-LnG"/>
                             <constraint firstItem="ylM-1D-9rt" firstAttribute="leading" secondItem="b0l-z5-y9V" secondAttribute="leading" constant="100" id="rgz-0i-YEL"/>
                             <constraint firstItem="jdd-qC-UxM" firstAttribute="top" secondItem="ylM-1D-9rt" secondAttribute="bottom" constant="25" id="ujq-gs-uun"/>
                         </constraints>
@@ -334,6 +357,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bpx-4k-tWz"/>
                     <connections>
+                        <outlet property="bannerView" destination="pep-2e-3lk" id="qwt-7h-YeF"/>
                         <outlet property="firstTxtField" destination="oCa-BM-efi" id="c46-D1-ibW"/>
                         <outlet property="stack" destination="aGL-5L-0OV" id="qUh-AT-JxE"/>
                     </connections>
@@ -364,19 +388,19 @@
                                 <color key="highlightedColor" red="1" green="0.61305080329999995" blue="0.53666536460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u6k-8v-ge7">
-                                <rect key="frame" x="45" y="142" width="324" height="78"/>
+                                <rect key="frame" x="45" y="142" width="324" height="56"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-Md-Y4P">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of transfers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85g-OE-fLa" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ2-1t-hm2" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="307" y="0.0" width="17" height="31.5"/>
+                                                <rect key="frame" x="307" y="0.0" width="17" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -384,16 +408,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qZs-Cc-TJA">
-                                        <rect key="frame" x="0.0" y="46.5" width="324" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="324" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time played" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-gY-jvm" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="127" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQl-cO-z0e" customClass="CustomMainLabel" customModule="MMCv2" customModuleProvider="target">
-                                                <rect key="frame" x="307" y="0.0" width="17" height="31.5"/>
+                                                <rect key="frame" x="307" y="0.0" width="17" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -403,7 +427,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rq-hC-Bfn" customClass="CustomNextScreeneButton" customModule="MMCv2" customModuleProvider="target">
-                                <rect key="frame" x="30" y="752" width="354" height="50"/>
+                                <rect key="frame" x="30" y="756" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8O6-Rj-BD3"/>
                                 </constraints>
@@ -412,17 +436,28 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="DfC-kI-i2r"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVw-uh-i61" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="CQo-fJ-t2E"/>
+                                    <constraint firstAttribute="height" constant="60" id="T8B-NX-pIm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ac-OY-KqM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jVw-uh-i61" firstAttribute="leading" secondItem="5ac-OY-KqM" secondAttribute="leading" id="6Zm-Fi-8bd"/>
                             <constraint firstItem="jX6-sP-vLg" firstAttribute="leading" secondItem="5ac-OY-KqM" secondAttribute="leading" constant="100" id="Col-5q-UMz"/>
                             <constraint firstItem="u6k-8v-ge7" firstAttribute="top" secondItem="X5b-Is-pMl" secondAttribute="bottom" constant="25" id="GzL-IA-UMH"/>
                             <constraint firstItem="X5b-Is-pMl" firstAttribute="top" secondItem="jX6-sP-vLg" secondAttribute="bottom" constant="25" id="Iqh-zy-zrE"/>
+                            <constraint firstAttribute="bottom" secondItem="jVw-uh-i61" secondAttribute="bottom" id="JZe-rB-3Sx"/>
+                            <constraint firstItem="jVw-uh-i61" firstAttribute="trailing" secondItem="5ac-OY-KqM" secondAttribute="trailing" id="L1Z-wK-zik"/>
                             <constraint firstItem="5ac-OY-KqM" firstAttribute="trailing" secondItem="0rq-hC-Bfn" secondAttribute="trailing" constant="30" id="PDq-2b-XSv"/>
                             <constraint firstItem="X5b-Is-pMl" firstAttribute="leading" secondItem="5ac-OY-KqM" secondAttribute="leading" id="Zrq-DI-zSH"/>
                             <constraint firstItem="jX6-sP-vLg" firstAttribute="top" secondItem="5ac-OY-KqM" secondAttribute="top" id="aZ4-if-wGz"/>
-                            <constraint firstItem="5ac-OY-KqM" firstAttribute="bottom" secondItem="0rq-hC-Bfn" secondAttribute="bottom" constant="60" id="bgV-xh-yir"/>
+                            <constraint firstItem="jVw-uh-i61" firstAttribute="top" secondItem="0rq-hC-Bfn" secondAttribute="bottom" constant="30" id="bgV-xh-yir"/>
                             <constraint firstItem="0rq-hC-Bfn" firstAttribute="leading" secondItem="5ac-OY-KqM" secondAttribute="leading" constant="30" id="lkC-iL-uPc"/>
                             <constraint firstItem="5ac-OY-KqM" firstAttribute="trailing" secondItem="u6k-8v-ge7" secondAttribute="trailing" constant="45" id="piF-6t-Ith"/>
                             <constraint firstItem="X5b-Is-pMl" firstAttribute="trailing" secondItem="5ac-OY-KqM" secondAttribute="trailing" id="vrC-a0-xOb"/>
@@ -442,6 +477,7 @@
                     <navigationItem key="navigationItem" id="KkX-1R-8SG"/>
                     <connections>
                         <outlet property="amountOfTransfersLabel" destination="mJ2-1t-hm2" id="fFG-a6-9y4"/>
+                        <outlet property="bannerView" destination="jVw-uh-i61" id="sYP-fB-njv"/>
                         <outlet property="timePlayedLabel" destination="qQl-cO-z0e" id="1TF-EY-9wc"/>
                     </connections>
                 </viewController>
@@ -452,10 +488,10 @@
     </scenes>
     <designables>
         <designable name="0rq-hC-Bfn">
-            <size key="intrinsicContentSize" width="73" height="30"/>
+            <size key="intrinsicContentSize" width="102" height="40"/>
         </designable>
         <designable name="85g-OE-fLa">
-            <size key="intrinsicContentSize" width="202.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="151.5" height="20.5"/>
         </designable>
         <designable name="BbS-BA-FJf">
             <size key="intrinsicContentSize" width="116.5" height="20.5"/>
@@ -464,13 +500,13 @@
             <size key="intrinsicContentSize" width="148.5" height="20.5"/>
         </designable>
         <designable name="GlP-vb-Hax">
-            <size key="intrinsicContentSize" width="69" height="30"/>
+            <size key="intrinsicContentSize" width="95" height="40"/>
         </designable>
         <designable name="HNT-2B-2gK">
             <size key="intrinsicContentSize" width="11" height="20.5"/>
         </designable>
         <designable name="Kbq-ej-sMp">
-            <size key="intrinsicContentSize" width="81.5" height="31.5"/>
+            <size key="intrinsicContentSize" width="58.5" height="20.5"/>
         </designable>
         <designable name="X5b-Is-pMl">
             <size key="intrinsicContentSize" width="70.5" height="20.5"/>
@@ -485,28 +521,28 @@
             <size key="intrinsicContentSize" width="140" height="20.5"/>
         </designable>
         <designable name="kIs-Mg-got">
-            <size key="intrinsicContentSize" width="61" height="30"/>
+            <size key="intrinsicContentSize" width="82" height="40"/>
         </designable>
         <designable name="kLk-Xr-rLo">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="33" height="34"/>
         </designable>
         <designable name="mJ2-1t-hm2">
             <size key="intrinsicContentSize" width="17" height="20.5"/>
         </designable>
         <designable name="oCa-BM-efi">
-            <size key="intrinsicContentSize" width="4" height="18.5"/>
+            <size key="intrinsicContentSize" width="5" height="22"/>
         </designable>
         <designable name="qQl-cO-z0e">
             <size key="intrinsicContentSize" width="17" height="20.5"/>
         </designable>
         <designable name="rcZ-gY-jvm">
-            <size key="intrinsicContentSize" width="127" height="31.5"/>
+            <size key="intrinsicContentSize" width="92.5" height="20.5"/>
         </designable>
         <designable name="t8w-TK-Lu3">
             <size key="intrinsicContentSize" width="114" height="20.5"/>
         </designable>
         <designable name="vW9-zM-xgp">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="39" height="40"/>
         </designable>
     </designables>
     <resources>
