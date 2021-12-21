@@ -25,7 +25,14 @@ class MainVC: UIViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setNotification()
+ //       setNotification()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if #available(iOS 14, *) {
+              ATTrackingManager.requestTrackingAuthorization { (status) in
+                  print("IDFA STATUS: \(status.rawValue)")
+              }
+            }
+        }
         
         bannerView.adUnitID = "ca-app-pub-1963870271091860/7878938871"
         bannerView.rootViewController = self
@@ -67,7 +74,7 @@ class MainVC: UIViewController, GADBannerViewDelegate {
       view.addSubview(bannerView)
     }
     
-    func setNotification(){
+/*    func setNotification(){
        //Ask for notification permission
        let n = NotificationHandler()
        n.askNotificationPermission {
@@ -84,6 +91,7 @@ class MainVC: UIViewController, GADBannerViewDelegate {
            }
        }
    }
+*/
 
 }
 

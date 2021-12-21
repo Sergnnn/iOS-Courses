@@ -1,0 +1,35 @@
+[debug] [2021-12-21T09:38:34.735Z] ----------------------------------------------------------------------
+[debug] [2021-12-21T09:38:34.736Z] Command:       /usr/local/bin/firebase /Users/Serg/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2021-12-21T09:38:34.736Z] CLI Version:   10.0.1
+[debug] [2021-12-21T09:38:34.736Z] Platform:      darwin
+[debug] [2021-12-21T09:38:34.736Z] Node Version:  v12.18.1
+[debug] [2021-12-21T09:38:34.744Z] Time:          Tue Dec 21 2021 11:38:34 GMT+0200 (GMT+02:00)
+[debug] [2021-12-21T09:38:34.744Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-21T09:38:34.752Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-21T09:38:34.752Z] > authorizing via signed-in user (drebin96@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/Serg/Documents/GitHub/iOS-Courses/iOS-Dev-2.0/Xcodes/MMCv2
+
+[debug] [2021-12-21T09:42:54.725Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at WriteStream.Socket._writeGeneric (net.js:786:11)
+    at WriteStream.Socket._write (net.js:798:8)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at WriteStream.Writable.write (_stream_writable.js:318:11)
+    at EventEmitter.signalExit.alwaysLast (/Users/Serg/.cache/firebase/tools/lib/node_modules/restore-cursor/index.js:7:18)
+    at EventEmitter.emit (events.js:315:20)
+    at EventEmitter.emit (domain.js:482:12)
+    at emit (/Users/Serg/.cache/firebase/tools/lib/node_modules/signal-exit/index.js:103:13)
+    at process.listener (/Users/Serg/.cache/firebase/tools/lib/node_modules/signal-exit/index.js:123:9)
+    at process.emit (events.js:315:20)
